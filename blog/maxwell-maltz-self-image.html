@@ -149,6 +149,35 @@ footer { background: var(--navy-panel); border-top: 1px solid rgba(168,85,247,0.
 }
 .logo .tm { font-size: .36em; font-weight: 700; vertical-align: super; color: #B57BF7; margin-left: .04em; }
 .footer-logo .tm { font-size: .4em; font-weight: 700; vertical-align: super; color: #B57BF7; margin-left: .04em; }
+.pull-quote {
+  font-family: var(--font-d);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700; font-style: italic;
+  line-height: 1.35;
+  color: var(--white);
+  border-left: 3px solid var(--purple-bright);
+  padding: 8px 0 8px 28px;
+  margin: 56px 0;
+}
+/* Highlight block */
+.highlight-block {
+  background: var(--navy-card);
+  border: 1px solid rgba(168,85,247,0.15);
+  border-left: 3px solid var(--orange-energy);
+  border-radius: 0 16px 16px 0;
+  padding: 28px 32px;
+  margin: 48px 0;
+}
+.highlight-block p {
+  margin-bottom: 0;
+  font-size: 24px; line-height: 1.7;
+}
+.highlight-block .hl-label {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--orange-energy); font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+}
 </style>
 
 <script>
