@@ -150,6 +150,35 @@ footer { background: var(--navy-panel); border-top: 1px solid rgba(168,85,247,0.
 }
 .logo .tm { font-size: .36em; font-weight: 700; vertical-align: super; color: #B57BF7; margin-left: .04em; }
 .footer-logo .tm { font-size: .4em; font-weight: 700; vertical-align: super; color: #B57BF7; margin-left: .04em; }
+.pull-quote {
+  font-family: var(--font-d);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 700; font-style: italic;
+  line-height: 1.35;
+  color: var(--white);
+  border-left: 3px solid var(--purple-bright);
+  padding: 8px 0 8px 28px;
+  margin: 56px 0;
+}
+/* Highlight block */
+.highlight-block {
+  background: var(--navy-card);
+  border: 1px solid rgba(168,85,247,0.15);
+  border-left: 3px solid var(--orange-energy);
+  border-radius: 0 16px 16px 0;
+  padding: 28px 32px;
+  margin: 48px 0;
+}
+.highlight-block p {
+  margin-bottom: 0;
+  font-size: 24px; line-height: 1.7;
+}
+.highlight-block .hl-label {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--orange-energy); font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+}
 </style>
 
 <script>
@@ -181,6 +210,11 @@ footer { background: var(--navy-panel); border-top: 1px solid rgba(168,85,247,0.
 <div class="divider"></div>
 
 <article class="article-body">
+  <div class="highlight-block">
+    <span class="hl-label">The finding</span>
+    <p>It's also, as far as researchers have been able to trace it, not a real finding.</p>
+  </div>
+
   <p>For decades, L&amp;D conversations have repeated a specific number: only 10 percent of training investment actually transfers to the job. It shows up in conference talks, consulting decks, and the opening line of countless articles on this exact subject. It's also, as far as researchers have been able to trace it, not a real finding. The figure originated in a 1982 remark by a training consultant, was never based on measured data, and was picked up and re-cited by author after author until it hardened into an accepted fact nobody had actually verified. A 2011 paper by researchers J. Kevin Ford, Stephen Yelon, and Abigail Billington examined the claim's origins directly and found no empirical study behind it at all — the number simply propagated through citation.</p>
 
   <p>That the field's most-repeated statistic about itself turns out to be unsupported is, in a strange way, a better starting point than the number itself would have been. It says something real: this is a research area prone to appealing, memorable claims that outrun the evidence, which is exactly the discipline a Professional-facing piece on the subject should model rather than repeat. The actual, defensible starting point is simpler and less dramatic — transfer varies widely across studies, training types, and how "transfer" gets measured, and no single clean percentage describes it. What the research does establish with more confidence is not how much fails, but why.</p>
@@ -205,11 +239,19 @@ footer { background: var(--navy-panel); border-top: 1px solid rgba(168,85,247,0.
 
   <p>This is where the underlying evidence problem echoes something larger than training specifically. The gap between an insight and a sustained behavior isn't unique to corporate learning — it shows up anywhere someone is expected to carry a new understanding forward without a mechanism for making the attempt visible to anyone, including themselves. Training transfer research essentially describes, in organizational terms, why a specific kind of continuity — someone noticing, someone responding — determines whether a change holds. The mechanism generalizes even though the research literature that names it is specific to workplace learning.</p>
 
+  <div class="pull-quote">
+    The mechanism generalizes even though the research literature that names it is specific to workplace learning.
+  </div>
+
   <p>What this suggests for practice is narrower than most transfer-of-training advice usually lands on. It isn't "make training better," though that's rarely bad advice. It's that the highest-leverage intervention available to most L&amp;D functions isn't inside the training room at all — it's a structured, low-effort mechanism for managers to notice and respond to attempted application in the weeks after a program ends. That doesn't require a new training program. It requires making an invisible behavior — did anyone try this, and did anyone notice — visible enough to act on, which is a measurement and evidence problem before it's a training-design problem.</p>
 
   <p>This is also where the transfer-of-training literature intersects with a broader measurement problem that shows up well beyond corporate learning: most systems are built to record whether an event happened — attendance, completion, a signature on a form — rather than whether anything downstream of the event actually changed. A completion record answers "did this occur." It says nothing about "did this get used," and the two questions have very different answers in most organizations, precisely because only one of them is being tracked. Closing that gap doesn't require replacing manager judgment with a new system. It requires giving managers and employees a low-friction way to make the six weeks after training as visible as the training day itself already is.</p>
 
   <p>Most organizations don't have that mechanism. They have a training completion record and, at best, a satisfaction survey collected the same day. Neither one captures whether anything changed six weeks later, on the job, in front of a manager who may or may not have noticed, which means the organization is measuring the training event closely while leaving the factor the research most consistently points to — what happens afterward — almost entirely unmeasured and unmanaged.</p>
+
+  <div class="pull-quote">
+    Neither one captures whether anything changed six weeks later, on the job, in front of a manager who may or may not have noticed.
+  </div>
 </article>
 
 <div style="max-width:700px;margin:0 auto;padding:0 24px;">
