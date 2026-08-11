@@ -1,65 +1,72 @@
-# CLAUDE.md
+# MyDopa Project — Read This First
 
-Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-specific instructions as needed.
+## What this project is
+MyDopa is a habit/mindset app. This repo is the blog + website (mydopa.app).
 
-**Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.
+## Folder map
+- Blog articles: `blog/`
+- Article filenames match the URL slug, e.g. `blog/why-training-transfer-fails.html`
+- Canonical master (copy this for every new article): `blog/maxwell-maltz-self-image.html`
 
-## 1. Think Before Coding
+## Production system — how every new article is made
+1. Copy `maxwell-maltz-self-image.html` verbatim. Rename to the new slug.
+2. Populate only the VARIABLE regions. Leave LOCKED regions untouched.
 
-**Don't assume. Don't hide confusion. Surface tradeoffs.**
+**LOCKED (never edit):**
+- Entire `<style>` block
+- `<nav>`, `<footer>`, divider, CTA block structure
+- Reveal scroll script, PostHog analytics
+- Responsive rules, animations
 
-Before implementing:
-- State your assumptions explicitly. If uncertain, ask.
-- If multiple interpretations exist, present them - don't pick silently.
-- If a simpler approach exists, say so. Push back when warranted.
-- If something is unclear, stop. Name what's confusing. Ask.
+**VARIABLE (article-specific):**
+- `<title>`, meta description, canonical URL, OG/Twitter tags
+- JSON-LD (headline, description, url, datePublished, dateModified, author, articleSection, keywords)
+- `.article-category` label + inline color
+- `<h1>`, deck, byline
+- Article body
+- Lab cards (href, category label + color, title, excerpt)
+- Footer signature
 
-## 2. Simplicity First
-
-**Minimum code that solves the problem. Nothing speculative.**
-
-- No features beyond what was asked.
-- No abstractions for single-use code.
-- No "flexibility" or "configurability" that wasn't requested.
-- No error handling for impossible scenarios.
-- If you write 200 lines and it could be 50, rewrite it.
-
-Ask yourself: "Would a senior engineer say this is overcomplicated?" If yes, simplify.
-
-## 3. Surgical Changes
-
-**Touch only what you must. Clean up only your own mess.**
-
-When editing existing code:
-- Don't "improve" adjacent code, comments, or formatting.
-- Don't refactor things that aren't broken.
-- Match existing style, even if you'd do it differently.
-- If you notice unrelated dead code, mention it - don't delete it.
-
-When your changes create orphans:
-- Remove imports/variables/functions that YOUR changes made unused.
-- Don't remove pre-existing dead code unless asked.
-
-The test: Every changed line should trace directly to the user's request.
-
-## 4. Goal-Driven Execution
-
-**Define success criteria. Loop until verified.**
-
-Transform tasks into verifiable goals:
-- "Add validation" → "Write tests for invalid inputs, then make them pass"
-- "Fix the bug" → "Write a test that reproduces it, then make it pass"
-- "Refactor X" → "Ensure tests pass before and after"
-
-For multi-step tasks, state a brief plan:
+**Style block identity check** — run before committing any article:
 ```
-1. [Step] → verify: [check]
-2. [Step] → verify: [check]
-3. [Step] → verify: [check]
+diff <(awk '/<style>/,/<\/style>/' blog/maxwell-maltz-self-image.html) \
+     <(awk '/<style>/,/<\/style>/' blog/YOUR-ARTICLE.html)
 ```
+Empty diff = pass. Any output = stop and fix.
 
-Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
+## Authorship by lane
+- All lanes default to: byline `By DOPA`, JSON-LD author `DOPA`, footer `— DOPA`
+- **HGY / IP lane exception**: byline `By René Estripeaut`, JSON-LD author `René Estripeaut`, footer `— René Estripeaut`
 
----
+## Category colors
+Always source category labels and hex colors from `MyDopa_Category_Color_System.md`.
+Never copy from the live site — it has drifted from the source of truth more than once.
 
-**These guidelines are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplication, and clarifying questions come before implementation rather than after mistakes.
+## Pre-approval gate
+Before writing any file, produce a pre-commit report:
+- Filename, confirmed URLs, pub date
+- Style-block diff result (pass/fail)
+- QC table: category label, color, author, lab card values
+
+No file is written until the user approves the report.
+
+## In-body links
+Insert as standalone `<p>` elements between paragraphs — do not inline-wrap existing text.
+If a referenced article doesn't exist in the repo, flag it and stop. Do not guess or substitute.
+
+## Visual variety components
+`.highlight-block` and `.pull-quote` are defined in the style block (added to canonical master in commit `7d9fbb0`). Use the HTML structure from `blog/can-you-remember-last-tuesday.html` as reference.
+
+## Deploying
+```
+git add blog/YOUR-ARTICLE.html
+git commit -m "..."
+git push origin main
+```
+Site is on **Cloudflare Pages** — pushing to `main` triggers auto-deploy. GitHub remote: `estripeautrene-bit/MyDopa.git`.
+
+## Known gotchas
+- Local working directory is `DOPAmine/`; GitHub repo is `MyDopa` — if push fails, check `git remote -v`.
+- Named-person articles (Maxwell Maltz, Carol Dweck, etc.) require: "MyDopa is not affiliated with or endorsed by [name]."
+- Check the repo before starting a new article — don't duplicate existing slugs or topics.
+- The method is now called **MyHGY™ Method** (formerly "Have a Great Yesterday Method"). Use MyHGY™ Method in all new content.
