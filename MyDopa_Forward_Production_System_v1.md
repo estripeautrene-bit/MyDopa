@@ -1,6 +1,41 @@
 # MyDopa Forward Production System v1
 
-**⚠️ RECONSTRUCTION NOTE (added August 11, 2026):** This file was found to be entirely missing from the GitHub repo. This version was reassembled from excerpts retrievable via the Claude project knowledge base search, NOT from a single complete original file. Sections B through F below are believed complete based on available excerpts. Section A (strategic foundation / three content lanes) was NOT fully retrieved and may be incomplete. Rene should locate and upload the true original file if one exists, to replace this reconstruction.
+**Status:** Installed and authoritative. Effective for all Brain Lab articles published August 7, 2026 forward.
+**Legacy policy:** Articles published before August 7, 2026 are not retroactively modified — no label, color, HTML, or CTA cleanup — unless René names a specific page for correction.
+
+**Reconstruction note (August 11, 2026):** This file was found entirely missing from the GitHub repo and was reassembled from the Claude project knowledge base. As of this update, all six sections (A through F) have been recovered via search and are believed complete.
+
+---
+
+## A. Strategic Foundation — Three Forward Lanes
+
+All Brain Lab content belongs to one of three lanes, all running through this one factory:
+
+**1. B2C Core**
+The existing consumer SEO/Reddit engine — the primary publishing lane. Serves people already trying to improve who need better visibility into their progress, consistency, capability, evidence, and change. Uses the full one-person/pain-point framing, the Pain-Point Validation Rule, and Reddit Vault validation.
+
+**2. Professional / Thought Leadership**
+Content for therapists, coaches, psychologists, HR/L&D professionals, managers, educators, and behavior-change/personal-development professionals. Purpose: professional usefulness, credibility, citations, backlinks, AI/search visibility, shareability, Know-Like-Trust, and building MyDopa's intellectual authority — not direct app conversion. B2B/L&D sits inside this lane as a commercial sub-lane, grounded in the durable individual-level evidence record the product genuinely produces, not unproven organizational ROI claims.
+
+Uses the same Article Production Standard and HTML Production Standard as B2C, but is not forced into the consumer one-person/pain-point structure when the professional reader calls for different structure or depth.
+
+**3. Have a Great Yesterday Method™ / Intellectual Property**
+
+Canonical name: **The Have a Great Yesterday Method™ — powered by persistent small practices.**
+
+Governing definition: **The Have a Great Yesterday Method is the daily practice of showing up for yourself.**
+
+Central claim: **Insight can start change, but consistent practice creates and sustains change.**
+
+Practical logic: **notice → preserve evidence → challenge distortion → return to reality** — combined with visibility, continuity, evidence, and persistent small practice.
+
+An explicit content/IP lane, not background doctrine alone. Generates both consumer-facing and professional-facing articles on awareness, attention, consistency, autobiographical memory, evidence, self-efficacy, implementation, continuity, progress visibility, accuracy, clarity, self-confidence, and the distinction between consuming personal-development insight and practicing it consistently.
+
+**Scientific discipline (applies across all three lanes, sharpest here):** established research may support mechanisms adjacent to the Method. The integrated proprietary Method itself is never described as scientifically proven until MyDopa-specific research exists.
+
+**Underlying architecture (all three lanes):** MyDopa = transformation through visible and continuous progress → visibility + continuity mechanisms → Accuracy → Clarity → Self-Confidence destinations → grounded in "confidence comes from evidence" → practiced daily through HGY (MyToday → MyYesterday → MyProgress, activated by Discoveries) → organized across five pillars (Mindset, Emotions, Body, Goals, Relationships). DOPA is the character/voice layer across all lanes. The older governing sentence ("Your day is already full of wins...") remains valid B2C-entry messaging, not the sole governing line. "Transformation" (noun) is canonical; "transform" (verb) stays restricted elsewhere per the standing anti-AI vocabulary rule.
+
+**Register note:** the Content Register remains the work order for all three lanes. It is not yet expanded with Professional or HGY inventory — that expansion is a deliberate future step, done separately.
 
 ---
 
@@ -78,3 +113,45 @@ CTA copy may be contextual to the article ("Try the 7-Day Dare," or another fram
 ## F. Legacy Policy
 
 Everything published before August 7, 2026 is legacy. No retroactive label, color, HTML, CTA, or funnel cleanup unless René names a specific page for correction.
+
+---
+
+## G. Wednesday Production Rule — Permanent
+
+**Status:** Fixed production rule, not a recommendation. Effective immediately, repeats every Wednesday until René explicitly changes it.
+
+**Every Wednesday, produce exactly 11 articles total:**
+- 7 B2C Core
+- 2 Professional / Thought Leadership
+- 2 HGY / IP
+
+**Selection constraints:**
+- Selection must come only from the existing approved queue/register for each lane.
+- Do not invent new topics, titles, clusters, or substitutions.
+- Do not rebalance the lane mix (always 7 / 2 / 2).
+- If an article required for the next production slot is blocked, on hold, missing validation, or otherwise not production-ready, **stop and flag the blocker** — do not invent a replacement topic to fill the slot.
+
+**Lane-specific rules remain in force, unchanged:**
+- B2C Core follows the existing B2C validation/production rules (Pain-Point Validation Rule, etc.).
+- Professional / Thought Leadership follows the research-fidelity standard.
+- HGY / IP follows the HGY Source of Truth and doctrine-fidelity review.
+- HGY / IP articles are authored and signed by René Estripeaut.
+- B2C Core and Professional / Thought Leadership articles are authored by DOPA.
+- Category labels/colors come from the authoritative `MyDopa_Category_Color_System.md`.
+- "Also From the Lab" labels/colors must be checked against the Category Color System directly — never copied blindly from legacy or live HTML.
+
+---
+
+## H. Canonical Document Location — Permanent
+
+This file (`MyDopa_Forward_Production_System_v1.md`) must exist in exactly two places, kept identical:
+
+1. **Claude Code repo** (`~/MyDopa/MyDopa_Forward_Production_System_v1.md`) — this is the **canonical/master copy**.
+2. **Claude Project Knowledge** — must contain an identical current copy, so the Claude Project (chat) and Claude Code follow the same factory rules without re-explanation.
+
+**Purpose:** keep Claude Project and Claude Code synchronized and avoid wasting context/credits re-explaining factory rules in every handoff.
+
+**When this document changes going forward:**
+1. Update the canonical repo copy first.
+2. Provide the exact same updated file for replacement in Claude Project Knowledge.
+3. The two copies must never be allowed to drift out of sync.
