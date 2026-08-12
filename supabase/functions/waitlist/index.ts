@@ -442,7 +442,7 @@ Deno.serve(async (req) => {
     headers: { 'Authorization': `Bearer ${RESEND_KEY}`, 'Content-Type': 'application/json' },
     body:    JSON.stringify({
       from:    'MyDopa <hello@mydopa.app>',
-      to:      ['hello@mydopa.app'],
+      to:      ['re@mydopa.app'],
       subject: `New waitlist signup: ${email}`,
       html:    `<p><strong>${email}</strong> just joined the MyDopa waitlist. Score: ${visibility_score}/13. Profile: ${q1_profile ?? 'unknown'}.</p>`,
     }),
