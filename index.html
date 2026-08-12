@@ -1210,8 +1210,9 @@ var quizAnswers={q1_profile:'',q2_likert:null,q3_evidence:'',q4_good_day:'',q5_t
 var capturedEmail='';
 
 function openQuiz(e){
-  if(e) e.preventDefault();
+  if(e){ e.preventDefault(); posthog.capture('invitation_clicked'); }
   document.getElementById('quizOverlay').classList.add('active');
+  posthog.capture('quiz_opened');
   document.body.style.overflow='hidden';
   showScreen(0);
 }
@@ -1401,7 +1402,7 @@ function submitEmail(email,cb,stage){
     method:'POST',
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify({email:email,answers:quizAnswers,stage:stage})
-  }).catch(function(){});
+  }).then(function(r){ if(r.ok) posthog.capture('email_submitted'); }).catch(function(){});
   if(stage==='quiz_completed') showToast();
   if(cb) cb();
 }
