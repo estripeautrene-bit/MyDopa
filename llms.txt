@@ -1,0 +1,58 @@
+# MyDopa™
+
+> Fall in love with your own progress.
+
+MyDopa™ is a daily progress-capture app that makes invisible personal progress visible, understandable, and cumulative. The core practice is the MyHGY™ Method — a two-minute daily habit of logging one meaningful moment so your brain can build an accurate, cumulative record of your own growth.
+
+## Product
+
+- [MyDopa™ — Home](https://mydopa.app/): Daily progress capture. Fall in love with your own progress.
+- [The MyDopa™ Feeling](https://mydopa.app/feelings): The emotional experience MyDopa™ is built around.
+- [Meaning](https://mydopa.app/meaning): How MyDopa™ turns daily moments into lasting meaning.
+- [Examples](https://mydopa.app/examples): Real examples of moments people capture in MyDopa™.
+- [Word Mirrors](https://mydopa.app/word-mirrors): A tool for finding the words for what you already feel.
+- [Today & MyProgress](https://mydopa.app/blog/today-and-myprogress): The two core screens inside the app and what they do.
+- [Discoveries](https://mydopa.app/blog/mydopa-discoveries): How MyDopa™ surfaces patterns you couldn't see on your own.
+- [Praxis](https://mydopa.app/blog/mydopa-praxis): Where understanding becomes practice inside MyDopa™.
+
+## The Method
+
+- [MyHGY™ Method](https://mydopa.app/blog/have-a-great-yesterday-method): The two-minute daily practice at the heart of MyDopa™.
+- [Can You Remember the Best Moment from Last Tuesday?](https://mydopa.app/blog/can-you-remember-last-tuesday): Why your brain discards evidence of your own progress — and what to do about it.
+- [The Science of Progress](https://mydopa.app/blog/the-science-of-progress): How MyDopa™ works with the brain, not against it.
+- [The Daily Wins Habit](https://mydopa.app/blog/daily-wins-habit-brain-rewire): How three captured moments a day rewires the brain over time.
+- [The Four Pillars](https://mydopa.app/blog/the-four-pillars): Why personal growth only compounds when all four pillars are working.
+
+## Identity and Change
+
+- [Maxwell Maltz and the Self-Image That Runs Your Life](https://mydopa.app/blog/maxwell-maltz-self-image): The foundational science of why your self-image determines what you do next.
+- [The Identity Lag Nobody Talks About](https://mydopa.app/blog/identity-lag-self-image-change): Why people change their behavior but still feel like the old version of themselves.
+- [Why You Still Feel the Same After Changing](https://mydopa.app/blog/why-you-still-feel-the-same-after-changing): The neuroscience behind the gap between real change and felt change.
+- [Your Brain Hasn't Caught Up Yet](https://mydopa.app/blog/your-brain-hasnt-caught-up-yet): Why the feeling of being behind is a perception problem, not a reality problem.
+- [Why You Can't See Your Own Progress](https://mydopa.app/blog/invisible-progress): The cognitive reason progress stays invisible — and how to make it visible.
+- [Insight Can Start Change](https://mydopa.app/blog/insight-can-start-change): Why understanding something intellectually is not enough to make it felt.
+
+## Self-Trust
+
+- [Why Self-Trust Comes Before Discipline](https://mydopa.app/blog/self-trust-before-discipline): The hidden prerequisite every self-improvement framework skips.
+- [The Hidden Cost of Breaking Promises to Yourself](https://mydopa.app/blog/broken-promises-to-yourself): How small broken commitments erode the foundation of self-confidence.
+- [How to Trust Yourself Again](https://mydopa.app/blog/how-to-trust-yourself-again): A practical path back to self-trust built on captured evidence.
+
+## Progress and Comparison
+
+- [You Are Not Behind](https://mydopa.app/blog/you-are-not-behind): Why the feeling of being behind is a measuring problem, not a progress problem.
+- [I Thought I'd Be Further Along By Now](https://mydopa.app/blog/i-thought-id-be-further-along-by-now): The grief of unmet timelines — and what it's actually telling you.
+- [Why Growth Feels Invisible](https://mydopa.app/blog/why-growth-feels-invisible): Why real progress is structurally hard for the brain to perceive.
+- [One Small Win Is Not Small When You Are Struggling](https://mydopa.app/blog/one-small-win-is-not-small-when-you-are-struggling): Why the size of the win is relative to the weight of the moment.
+
+## The Brain and Behavior Science
+
+- [Rick Hanson's Negativity Bias](https://mydopa.app/blog/rick-hanson-negativity-bias): The neuroscience of why bad experiences stick and good ones fade.
+- [Why Do I Only Remember Bad Things?](https://mydopa.app/blog/why-do-i-only-remember-bad-things): What the negativity bias actually costs you — and how to actively counter it.
+- [Norman Doidge and Neuroplasticity](https://mydopa.app/blog/norman-doidge-and-the-brain-that-changes-itself): The science behind the brain's capacity to physically rewire itself through practice.
+- [Karl Weick's Small Wins Theory](https://mydopa.app/blog/small-wins-theory): Why small progress is the only progress that reliably compounds.
+
+## Feelings and Language
+
+- [Naming Emotions When You Don't Have the Words](https://mydopa.app/blog/naming-emotions-feelings-without-words): Why labeling what you feel is a neurological act, not just a vocabulary one.
+- [What Is FOMO?](https://mydopa.app/blog/what-is-fomo-words-for-feelings): Words for the feeling of watching your own life from the outside.

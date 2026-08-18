@@ -63,7 +63,7 @@ git add blog/YOUR-ARTICLE.html
 git commit -m "..."
 git push origin main
 ```
-Site is on **Cloudflare Pages** — pushing to `main` triggers auto-deploy. GitHub remote: `estripeautrene-bit/MyDopa.git`.
+Site is on **GitHub Pages** (DNS managed at GoDaddy) — pushing to `main` triggers auto-deploy. GitHub remote: `estripeautrene-bit/MyDopa.git`.
 
 ## Known gotchas
 - Local working directory is `DOPAmine/`; GitHub repo is `MyDopa` — if push fails, check `git remote -v`.
