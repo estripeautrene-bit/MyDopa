@@ -1,0 +1,31 @@
+name: Rebuild sitemap
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - sitemap.xml   # prevents re-triggering when this action commits the rebuilt file
+
+permissions:
+  contents: write
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild sitemap.xml
+        run: python3 scripts/build-sitemap.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet sitemap.xml; then
+            git add sitemap.xml
+            git commit -m "chore: auto-rebuild sitemap [skip ci]"
+            git push
+          else
+            echo "sitemap.xml already up to date"
+          fi
