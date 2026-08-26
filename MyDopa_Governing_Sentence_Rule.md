@@ -111,3 +111,21 @@ Research on consumer conversion consistently confirms that recognition outperfor
 | **"Your day is already full of wins. You are just not keeping them. MyDopa fixes that." The sentence is the rule. The rule is permanent. Every screen. Every email. Every surface that asks for a decision.** |
 
 MyDopa — The Governing Sentence Rule | June 2026 | Permanent | Add to every project and every tech handoff
+
+---
+
+## Repetition / Subconscious Impression Rule — Added August 12, 2026, Permanent
+
+MyDopa and MyHGY must explain that meaningful change does not usually come from one exposure to a good idea. A book, video, seminar, quote, or insight can create awareness, but the conscious mind must return to the idea through repeated practice before it can impress a new self-story into the subconscious.
+
+**The editorial mechanism:**
+
+Conscious attention plants the direction. Repetition impresses it into the subconscious. Visible evidence makes the new story believable. MyDopa makes that practice easier to repeat.
+
+**Where to use this lens:** especially in articles about affirmations, identity shift, self-image, evidence of growth, captured evidence, resilience, and the gap between effort and evidence, and in Professional/Thought Leadership content about learning transfer.
+
+**Where not to force it:** unrelated science explainers (e.g., negativity bias mechanics, memory asymmetry) that are teaching a different mechanism entirely. Let this lens appear where the article is already explaining why insight fades, why practice matters, or why visible evidence makes change believable — not mechanically inserted everywhere.
+
+This does not replace "Confidence comes from evidence." It explains *why* evidence has to be repeated and made visible before it changes how someone sees themselves.
+
+**Production note:** this is a standing editorial lens, not a register change. No new clusters, no new production quota, no retroactive rewrite of existing articles. Applied going forward as relevant articles come up for writing in the existing queue.
