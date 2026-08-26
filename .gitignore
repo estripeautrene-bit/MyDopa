@@ -1,2 +1,15 @@
 claude-seo/
 DOPAmine/social/node_modules/
+
+# Internal working files — not for public repo
+*.docx
+*.md
+*.xlsx
+*.zip
+audit/
+audit 2/
+
+# Keep Claude Code config files tracked
+!CLAUDE.md
+!AGENTS.md
+!SKILL.md
