@@ -4,6 +4,7 @@ DOPAmine/social/node_modules/
 # Internal working files — not for public repo
 *.docx
 *.md
+*.pdf
 *.xlsx
 *.zip
 audit/
