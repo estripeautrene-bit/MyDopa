@@ -93,6 +93,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mydopa.app/blog/homework-adherence-research-internalization-gap</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mydopa.app/blog/how-manager-support-affects-whether-training-transfers</loc>
     <priority>0.8</priority>
   </url>
@@ -126,6 +130,10 @@
   </url>
   <url>
     <loc>https://mydopa.app/blog/i-did-everything-right-why-am-i-still-stuck</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/blog/i-do-not-understand-my-life-anymore</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -209,6 +217,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mydopa.app/blog/recognizing-arrival-fallacy-in-high-achieving-clients</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mydopa.app/blog/resilience-is-built-backwards</loc>
     <priority>0.8</priority>
   </url>
@@ -229,11 +241,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mydopa.app/blog/seneca-and-the-life-you-never-track</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mydopa.app/blog/small-wins-theory</loc>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mydopa.app/blog/some-progress-looks-like-peace</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/blog/stop-postponing-your-life</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -250,6 +270,10 @@
   </url>
   <url>
     <loc>https://mydopa.app/blog/the-birthday-that-made-you-do-the-math</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/blog/the-chase-is-better-than-the-prize</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -334,6 +358,10 @@
   </url>
   <url>
     <loc>https://mydopa.app/blog/when-accomplishment-stops-working</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/blog/when-every-year-feels-the-same</loc>
     <priority>0.8</priority>
   </url>
   <url>
