@@ -56,3 +56,11 @@ MyDopa™ is a daily progress-capture app that makes invisible personal progress
 
 - [Naming Emotions When You Don't Have the Words](https://mydopa.app/blog/naming-emotions-feelings-without-words): Why labeling what you feel is a neurological act, not just a vocabulary one.
 - [What Is FOMO?](https://mydopa.app/blog/what-is-fomo-words-for-feelings): Words for the feeling of watching your own life from the outside.
+
+## Personal Development
+
+- [Daily Personal Development](https://mydopa.app/personal-development): How to practice personal development continuously, make personal progress visible, preserve evidence of growth, and understand how MyDopa supports daily development across real life.
+
+## For Organizations
+
+- [MyDopa for Organizations](https://mydopa.app/for-organizations): How organizations can combine structured personal-development learning with a private daily practice for individuals, reinforce learning between formal sessions, and support real-world application over time.
