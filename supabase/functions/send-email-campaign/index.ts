@@ -110,7 +110,7 @@ function tmplWelcome(name: string): string {
               bp('Small wins add up and compound. Keep it up.') +
               bpLast('Tomorrow morning DOPA reflects your day back to you.'),
     sig:      '— DOPA',
-    ctaLabel: 'Open DOPAmine →',
+    ctaLabel: 'Open MyDopa →',
     ctaUrl:   'https://mydopa.app/app.html'
   })
 }
@@ -179,11 +179,11 @@ ${pp('Seven days. You showed up.')}
 ${pp("I've been watching the numbers on my end and I want you to know that most people don't make it here. Something caught your attention and you kept going with it. That is not nothing.")}
 ${pp("I built this because I believe most people can find what you found — in 7 days — if they have the right tool. You've had 7 days. You tell me if I'm wrong.")}
 ${pp("Here's what I want to offer you.")}
-${pp("$17.95/year — your rate, locked forever. When DOPAmine goes public the annual plan is $69.99. You keep $17.95 for as long as you stay.")}
+${pp("$17.95/year — your rate, locked forever. When MyDopa goes public the annual plan is $69.99. You keep $17.95 for as long as you stay.")}
 ${pp("If you're in, reply to this email and I'll send you a link directly.")}
 ${pp("If you're not ready, no pressure. The app stays free through Day 14 and I'll be in touch again then.")}
 ${pp('Either way — thank you for being here early.')}
-${pp('Rene<br/>Founder, DOPAmine')}
+${pp('Rene<br/>Founder, MyDopa')}
 <p style="margin:40px 0 0;font-size:12px;color:rgba(255,255,255,0.4);${FONT};">If you'd prefer not to hear from me, reply 'unsubscribe' and I'll remove you immediately.</p>
 </td></tr>
 </table>
@@ -204,7 +204,7 @@ function tmplDay14(name: string): string {
               bpBreak() +
               bp('The founding member offer is still open. Not forever — but still open.') +
               bpBreak() +
-              bp('$17.95/year — your rate, locked forever. When DOPAmine goes public the annual plan is $69.99. You keep $17.95 for as long as you stay.') +
+              bp('$17.95/year — your rate, locked forever. When MyDopa goes public the annual plan is $69.99. You keep $17.95 for as long as you stay.') +
               bpLast('If you\'ve felt something shift — this is how you keep it.') +
               `<p style="color:#888888;font-size:13px;text-align:center;${FONT};margin:16px 0;">14 days of moments DOPA has been keeping for you.</p>`,
     sig:      '— Rene, Founder',
@@ -271,7 +271,7 @@ const SERIF_F = `font-family:Georgia,'Times New Roman',serif`
 const SANS_F  = `font-family:-apple-system,Arial,sans-serif`
 const BRAIN   = 'https://mydopa.app/images/dopa-03-winking.png'
 
-const C_CTA   = `<a href="https://mydopa.app" style="display:block;background:#7B3FE4;color:white;text-align:center;padding:14px 24px;border-radius:10px;text-decoration:none;font-size:16px;font-family:sans-serif;margin:24px 0;">Open DOPAmine →</a>`
+const C_CTA   = `<a href="https://mydopa.app" style="display:block;background:#7B3FE4;color:white;text-align:center;padding:14px 24px;border-radius:10px;text-decoration:none;font-size:16px;font-family:sans-serif;margin:24px 0;">Open MyDopa →</a>`
 const C_UNSUB = `<p style="font-size:11px;color:#BBBBBB;text-align:center;font-family:sans-serif;">Not feeling it? No hard feelings. <a href="mailto:dopa@mydopa.app?subject=unsubscribe" style="color:#BBBBBB;">Unsubscribe</a>. Your moments stay safe in the app.</p>`
 
 const TOMORROW  = `Tomorrow morning DOPA will reflect on what you wrote today. Most people say it is the part they did not expect.`
@@ -503,7 +503,7 @@ async function processQueue(supabase: ReturnType<typeof createClient>): Promise<
     const name = sub?.first_name ? displayName(sub.first_name) : 'there'
 
     const ok = await sendEmail({
-      from: 'DOPAmine <hello@mydopa.app>',
+      from: 'MyDopa <hello@mydopa.app>',
       to: user.email,
       subject: "You started. That's everything.",
       html: tmplWelcome(name)
@@ -581,7 +581,7 @@ async function runDailyJob(supabase: ReturnType<typeof createClient>): Promise<R
     // ── Email 2A — Day 3 Active ───────────────────────────────
     if (ageDays >= 3 && ageDays <= 4 && !sub.email_day3_sent && winsTotal >= 1) {
       const ok = await sendEmail({
-        from: 'DOPAmine <hello@mydopa.app>',
+        from: 'MyDopa <hello@mydopa.app>',
         to: email,
         subject: 'Three days in.',
         html: tmplDay3Active(name)
@@ -595,7 +595,7 @@ async function runDailyJob(supabase: ReturnType<typeof createClient>): Promise<R
     // ── Email 2B — Day 3 Dormant ──────────────────────────────
     if (ageDays >= 3 && ageDays <= 4 && !sub.email_day3_sent && winsTotal === 0) {
       const ok = await sendEmail({
-        from: 'DOPAmine <hello@mydopa.app>',
+        from: 'MyDopa <hello@mydopa.app>',
         to: email,
         subject: 'The bar is low.',
         html: tmplDay3Dormant(name)
@@ -609,7 +609,7 @@ async function runDailyJob(supabase: ReturnType<typeof createClient>): Promise<R
     // ── Email 3 — Day 7 Completion ────────────────────────────
     if (ageDays >= 7 && ageDays <= 8 && !sub.email_day7_sent) {
       const ok = await sendEmail({
-        from: 'DOPAmine <hello@mydopa.app>',
+        from: 'MyDopa <hello@mydopa.app>',
         to: email,
         subject: 'One week. You just proved the dare works.',
         html: tmplDay7(name)
@@ -637,7 +637,7 @@ async function runDailyJob(supabase: ReturnType<typeof createClient>): Promise<R
     // ── Email 5 — Day 14 Transformation ──────────────────────
     if (ageDays >= 14 && ageDays <= 15 && !sub.paid && !sub.email_day14_sent) {
       const ok = await sendEmail({
-        from: 'DOPAmine <hello@mydopa.app>',
+        from: 'MyDopa <hello@mydopa.app>',
         to: email,
         subject: '14 days ago, your brain was filtering this out.',
         html: tmplDay14(name)

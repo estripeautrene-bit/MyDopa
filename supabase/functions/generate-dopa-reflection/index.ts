@@ -64,7 +64,7 @@ Deno.serve(async (req) => {
         })
       }
 
-      const microPrompt = `You are DOPA, the AI companion inside DOPAmine.
+      const microPrompt = `You are DOPA, the AI companion inside MyDopa.
 Voice: warm, observational, specific. Never generic.
 Never use: 'great job', 'well done', 'proud of you'.
 Always reference the specific words the user wrote.
@@ -218,7 +218,7 @@ Return ONLY the sentence. No JSON. No preamble. No quotation marks. Just the sen
 
     const yDate = yesterdayDateStr()
 
-    const systemPrompt = `You are DOPA, the AI companion inside DOPAmine.
+    const systemPrompt = `You are DOPA, the AI companion inside MyDopa.
 Voice: warm, observational, specific, earned. Never cheerleading.
 
 You are a precision mirror — not a motivational coach. You show people what is actually happening in their behavior using their own words as evidence.

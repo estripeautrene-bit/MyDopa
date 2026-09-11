@@ -409,7 +409,7 @@ Deno.serve(async (req) => {
           message = selectMessage(slot as PairSlot, signals, jVariant)
         }
 
-        const payloadObj: Record<string, string> = { title: 'DOPAmine', body: message, icon: '/icon.png' }
+        const payloadObj: Record<string, string> = { title: 'MyDopa', body: message, icon: '/icon.png' }
         if (slot === 'ywg') payloadObj.url = 'https://mydopa.app/app.html#yesterday'
         const payload = JSON.stringify(payloadObj)
         return webpush.sendNotification(s.subscription, payload)
