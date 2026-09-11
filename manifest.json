@@ -1,6 +1,6 @@
 {
-  "name": "DOPAmine",
-  "short_name": "DOPAmine",
+  "name": "MyDopa",
+  "short_name": "MyDopa",
   "start_url": "/app.html",
   "display": "standalone",
   "background_color": "#1a1a2e",

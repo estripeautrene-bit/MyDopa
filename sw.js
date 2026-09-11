@@ -1,4 +1,4 @@
-// DOPAmine Service Worker
+// MyDopa Service Worker
 // Version 1.0 — Push Notifications
 
 const CACHE_NAME = 'dopamine-v46';
@@ -30,7 +30,7 @@ self.addEventListener('fetch', event => {
 // Push — fires when a notification arrives from the server
 self.addEventListener('push', event => {
   let data = {
-    title: 'DOPAmine',
+    title: 'MyDopa',
     body: 'Your 3 good things are waiting. What just made you smile?',
     url: 'https://mydopa.app'
   };
@@ -87,5 +87,5 @@ self.addEventListener('notificationclick', event => {
 // Notification close — log for future analytics
 self.addEventListener('notificationclose', event => {
   // Future: log dismissal to Supabase for engagement tracking
-  console.log('DOPAmine notification dismissed');
+  console.log('MyDopa notification dismissed');
 });
