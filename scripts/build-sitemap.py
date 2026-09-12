@@ -23,11 +23,17 @@ SITEMAP  = ROOT / "sitemap.xml"
 BASE     = "https://mydopa.app"
 
 FIXED_PAGES = [
-    (f"{BASE}/",            "1.0"),
-    (f"{BASE}/meaning",     "0.9"),
-    (f"{BASE}/examples",    "0.9"),
-    (f"{BASE}/word-mirrors","0.9"),
-    (f"{BASE}/feelings",    "0.9"),
+    (f"{BASE}/",                                        "1.0"),
+    (f"{BASE}/meaning",                                 "0.9"),
+    (f"{BASE}/examples",                                "0.9"),
+    (f"{BASE}/word-mirrors",                            "0.9"),
+    (f"{BASE}/feelings",                                "0.9"),
+    (f"{BASE}/fall-in-love-with-your-own-progress",    "0.9"),
+    (f"{BASE}/self-efficacy",                           "0.9"),
+    (f"{BASE}/savouring",                               "0.9"),
+    (f"{BASE}/accuracy-clarity-self-confidence",        "0.9"),
+    (f"{BASE}/personal-development-deserves-a-practice","0.9"),
+    (f"{BASE}/visibility-and-continuity",               "0.9"),
 ]
 
 ENTRY = "  <url>\n    <loc>{loc}</loc>\n    <priority>{prio}</priority>\n  </url>"
