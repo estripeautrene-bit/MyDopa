@@ -504,4 +504,7 @@
     <loc>https://mydopa.app/blog/youre-not-chasing-the-thing-youre-chasing-a-feeling</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://mydopa.app/myagency/</loc>
+  </url>
 </urlset>

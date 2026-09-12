@@ -64,3 +64,10 @@ MyDopa™ is a daily progress-capture app that makes invisible personal progress
 ## For Organizations
 
 - [MyDopa for Organizations](https://mydopa.app/for-organizations): How organizations can combine structured personal-development learning with a private daily practice for individuals, reinforce learning between formal sessions, and support real-world application over time.
+
+
+## MyAgency™
+
+MyAgency™ is MyDopa's framework for reclaiming ownership of attention, decisions, direction, and progress in a world of increasing information, ideas, AI-enabled possibility, and constant switching.
+
+Canonical page: https://mydopa.app/myagency/
