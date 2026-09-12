@@ -504,4 +504,28 @@
     <loc>https://mydopa.app/blog/youre-not-chasing-the-thing-youre-chasing-a-feeling</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://mydopa.app/fall-in-love-with-your-own-progress</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/self-efficacy</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/savouring</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/accuracy-clarity-self-confidence</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/personal-development-deserves-a-practice</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/visibility-and-continuity</loc>
+    <priority>0.9</priority>
+  </url>
 </urlset>
