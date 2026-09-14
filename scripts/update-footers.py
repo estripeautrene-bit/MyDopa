@@ -95,6 +95,14 @@ def safety_check(path):
 def insert_css(text):
     return text.replace('</head>', FOOTER_CSS_BLOCK + '</head>', 1)
 
+# Blog-only override: resets old horizontal-flex footer to centered block layout
+BLOG_FOOTER_OVERRIDE = "  footer{display:block;max-width:none;text-align:center;}"
+
+def insert_css_blog(text):
+    """Insert CSS block for blog pages, including the footer block-layout override."""
+    block = FOOTER_CSS_BLOCK.replace('</style>', BLOG_FOOTER_OVERRIDE + '\n</style>', 1)
+    return text.replace('</head>', block + '</head>', 1)
+
 # ── Patch: add position:static to existing footer-nav CSS ────────────────────
 
 def clean_mobile_static(text):
@@ -141,6 +149,31 @@ def patch_existing(path):
     path.write_text(patched, encoding='utf-8')
     return True
 
+# ── Blog override: add footer block-layout fix to existing blog files ─────────
+
+def patch_blog_override(text):
+    """Insert footer block-layout override into the injected <style> if absent."""
+    if 'footer{display:block;max-width:none' in text:
+        return text
+    return re.sub(
+        r'(@media\(max-width:640px\)\{\.footer-nav\{grid-template-columns:1fr;gap:24px;\}\})\n</style>',
+        r'\1\n' + BLOG_FOOTER_OVERRIDE + r'\n</style>',
+        text,
+        count=1,
+    )
+
+def patch_blog_file(path):
+    if not safety_check(path):
+        return False
+    text = path.read_text(encoding='utf-8')
+    if 'footer-nav' not in text:
+        return False
+    patched = patch_blog_override(text)
+    if patched == text:
+        return False
+    path.write_text(patched, encoding='utf-8')
+    return True
+
 # ── Family B ──────────────────────────────────────────────────────────────────
 
 def update_family_b(path):
@@ -151,7 +184,7 @@ def update_family_b(path):
         print(f'  SKIP (already updated): {path.name}')
         return False
 
-    text = insert_css(text)
+    text = insert_css_blog(text)
 
     # Insert footer-nav after the closing </div> of .footer-social
     updated = re.sub(
@@ -198,7 +231,8 @@ def update_family_c(path):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    all_targets = sorted((ROOT / 'blog').glob('*.html')) + FAMILY_C
+    blog_files = sorted((ROOT / 'blog').glob('*.html'))
+    all_targets = blog_files + FAMILY_C
 
     # ── Cleanup pass: remove position:static from mobile override ───────────
     cl_done = cl_skip = 0
@@ -216,10 +250,18 @@ def main():
             p_done += 1
         else:
             p_skip += 1
-    print(f'Patch pass: {p_done} patched, {p_skip} skipped of {len(all_targets)} total\n')
+    print(f'Patch pass: {p_done} patched, {p_skip} skipped of {len(all_targets)} total')
+
+    # ── Blog override pass: add footer block-layout fix to blog files ────────
+    bo_done = bo_skip = 0
+    for f in blog_files:
+        if patch_blog_file(f):
+            bo_done += 1
+        else:
+            bo_skip += 1
+    print(f'Blog override pass: {bo_done} patched, {bo_skip} skipped of {len(blog_files)} total\n')
 
     # ── Full deploy: inject footer into new files ────────────────────────────
-    blog_files = sorted((ROOT / 'blog').glob('*.html'))
     b_done = b_skip = 0
     for f in blog_files:
         if update_family_b(f):
