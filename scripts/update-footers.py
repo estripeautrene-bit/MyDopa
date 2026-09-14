@@ -95,6 +95,52 @@ def safety_check(path):
 def insert_css(text):
     return text.replace('</head>', FOOTER_CSS_BLOCK + '</head>', 1)
 
+# ── Patch: add position:static to existing footer-nav CSS ────────────────────
+
+def clean_mobile_static(text):
+    """Remove redundant position:static from the mobile .footer-nav override."""
+    return re.sub(
+        r'(\.footer-nav\{grid-template-columns:[^}]*)position:static;([^}]*\})',
+        r'\1\2',
+        text,
+    )
+
+def cleanup_existing(path):
+    if not safety_check(path):
+        return False
+    text = path.read_text(encoding='utf-8')
+    if 'footer-nav' not in text:
+        return False
+    cleaned = clean_mobile_static(text)
+    if cleaned == text:
+        return False
+    path.write_text(cleaned, encoding='utf-8')
+    return True
+
+def patch_footer_static(text):
+    """Insert position:static into the base .footer-nav{} rule if absent.
+    Anchors to display:grid so the mobile override is never matched."""
+    def inserter(m):
+        rule = m.group(0)
+        if 'position:static' in rule:
+            return rule
+        return rule[:-1] + 'position:static;}'
+    return re.sub(r'\.footer-nav\{display:grid;[^}]+\}', inserter, text)
+
+def patch_existing(path):
+    if not safety_check(path):
+        return False
+    text = path.read_text(encoding='utf-8')
+    if 'footer-nav' not in text:
+        return False
+    if re.search(r'\.footer-nav\{display:grid;[^}]*position:static', text):
+        return False  # base rule already correct
+    patched = patch_footer_static(text)
+    if patched == text:
+        return False
+    path.write_text(patched, encoding='utf-8')
+    return True
+
 # ── Family B ──────────────────────────────────────────────────────────────────
 
 def update_family_b(path):
@@ -152,6 +198,27 @@ def update_family_c(path):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
+    all_targets = sorted((ROOT / 'blog').glob('*.html')) + FAMILY_C
+
+    # ── Cleanup pass: remove position:static from mobile override ───────────
+    cl_done = cl_skip = 0
+    for f in all_targets:
+        if cleanup_existing(f):
+            cl_done += 1
+        else:
+            cl_skip += 1
+    print(f'Cleanup pass: {cl_done} cleaned, {cl_skip} skipped of {len(all_targets)} total')
+
+    # ── Patch pass: add position:static to base .footer-nav rule ────────────
+    p_done = p_skip = 0
+    for f in all_targets:
+        if patch_existing(f):
+            p_done += 1
+        else:
+            p_skip += 1
+    print(f'Patch pass: {p_done} patched, {p_skip} skipped of {len(all_targets)} total\n')
+
+    # ── Full deploy: inject footer into new files ────────────────────────────
     blog_files = sorted((ROOT / 'blog').glob('*.html'))
     b_done = b_skip = 0
     for f in blog_files:
@@ -159,7 +226,7 @@ def main():
             b_done += 1
         else:
             b_skip += 1
-    print(f'\nFamily B: {b_done} updated, {b_skip} skipped of {len(blog_files)} total')
+    print(f'Family B: {b_done} updated, {b_skip} skipped of {len(blog_files)} total')
 
     c_done = c_skip = 0
     for f in FAMILY_C:
