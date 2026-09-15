@@ -38,6 +38,7 @@ FIXED_PAGES = [
     (f"{BASE}/adhd-focus-attention",                    "0.9"),
     (f"{BASE}/emotional-intelligence-resilience",       "0.9"),
     (f"{BASE}/psychology-human-behavior",               "0.9"),
+    (f"{BASE}/dopamine-neuroscience",                   "0.9"),
 ]
 
 ENTRY = "  <url>\n    <loc>{loc}</loc>\n    <priority>{prio}</priority>\n  </url>"
