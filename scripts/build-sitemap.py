@@ -42,6 +42,7 @@ FIXED_PAGES = [
     (f"{BASE}/personal-development-self-improvement",  "0.9"),
     (f"{BASE}/goals-discipline-motivation",            "0.9"),
     (f"{BASE}/career-change-job-loss",                 "0.9"),
+    (f"{BASE}/grief-loss",                             "0.9"),
 ]
 
 ENTRY = "  <url>\n    <loc>{loc}</loc>\n    <priority>{prio}</priority>\n  </url>"
