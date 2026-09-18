@@ -648,9 +648,9 @@ footer{
 <!-- ═══ HERO ═══ -->
 <section class="hero">
   <div class="hero-inner">
-    <span class="hero-eyebrow">Visibility-Powered Motivation</span>
-    <h1 class="hero-h">Fall in love with your <span style="color:#FFB020;">own</span> progress.</h1>
-    <p class="hero-sub"><span class="logo-text" style="font-size:1em;"><span class="d">My</span><span class="m">Dopa</span><span class="tm">™</span></span> makes it <span style="color:var(--amber);">visible.</span></p>
+    <span class="hero-eyebrow">Feeling behind doesn't mean you are.</span>
+    <h1 class="hero-h">Build From Within.</h1>
+    <p class="hero-sub" id="hero-variant-copy" style="animation:none;opacity:0;transition:opacity .35s ease;font-weight:400;"></p>
     <a href="#" class="quiz-btn" onclick="openQuiz(event)">Request Your Invitation →</a>
     <div class="quiz-proof">
       <span><div class="quiz-proof-dot"></div>Built on 40 years of behavioral science</span>
@@ -1243,6 +1243,29 @@ if(localStorage.getItem('cookieChoice')) document.getElementById('cookieBanner')
   io.observe(hero);
 })();
 
+// ── HERO COPY EXPERIMENT ──
+var HERO_VARIANTS={
+  'control_a':'MyDopa gives you short, curiosity-driven Discoveries and a simple daily practice to help you notice what is changing, see your progress, and build greater accuracy, clarity, and self-confidence from your own life.',
+  'variant_b':'MyDopa gives you short daily Discoveries and a simple practice that helps you notice your progress, keep the evidence, and build greater clarity, accuracy, and self-confidence.',
+  'variant_c':'Discover something useful every day, notice what changes in your own life, and build a record of progress that becomes more valuable the longer you keep going.'
+};
+var heroVariant='control_a';
+var _heroVariantSet=false;
+function applyHeroVariant(v){
+  if(_heroVariantSet) return;
+  _heroVariantSet=true;
+  heroVariant=(v&&HERO_VARIANTS[v])?v:'control_a';
+  var el=document.getElementById('hero-variant-copy');
+  if(el){el.textContent=HERO_VARIANTS[heroVariant];el.style.opacity='1';}
+  posthog.capture('hero_viewed',{hero_variant:heroVariant});
+}
+posthog.onFeatureFlags(function(){
+  applyHeroVariant(posthog.getFeatureFlag('mydopa_homepage_hero_v1'));
+});
+setTimeout(function(){
+  if(!_heroVariantSet&&!(window.posthog&&window.posthog.__loaded)){applyHeroVariant('control_a');}
+},3000);
+
 // ── QUIZ STATE ──
 var currentScreen=0;
 var totalQuestions=9;
@@ -1254,9 +1277,9 @@ var quizAnswers={q1_profile:'',q2_likert:null,q3_evidence:'',q4_good_day:'',q5_t
 var capturedEmail='';
 
 function openQuiz(e){
-  if(e){ e.preventDefault(); posthog.capture('invitation_clicked'); }
+  if(e){ e.preventDefault(); posthog.capture('invitation_clicked',{hero_variant:heroVariant}); }
   document.getElementById('quizOverlay').classList.add('active');
-  posthog.capture('quiz_opened');
+  posthog.capture('quiz_opened',{hero_variant:heroVariant});
   document.body.style.overflow='hidden';
   showScreen(0);
 }
@@ -1446,7 +1469,7 @@ function submitEmail(email,cb,stage){
     method:'POST',
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify({email:email,answers:quizAnswers,stage:stage})
-  }).then(function(r){ if(r.ok) posthog.capture('email_submitted'); }).catch(function(){});
+  }).then(function(r){ if(r.ok) posthog.capture('email_submitted',{hero_variant:heroVariant}); }).catch(function(){});
   if(stage==='quiz_completed') showToast();
   if(cb) cb();
 }
