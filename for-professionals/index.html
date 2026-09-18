@@ -183,72 +183,32 @@
     margin: 0 auto;
     padding: 72px 24px 56px;
   }
-  .hero-eyebrow {
-    display: block;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--amber);
-    margin-bottom: 18px;
-  }
-  .hero h1 {
+  .hero h1,
+  .hero .word {
     font-family: var(--fd);
     font-weight: 900;
-    font-size: clamp(38px, 7vw, 68px);
-    line-height: 1.06;
-    margin-bottom: 28px;
-    color: #fff;
-  }
-  .hero-intro {
-    font-size: 19px;
-    line-height: 1.8;
-    color: var(--gray-light);
-    max-width: 600px;
+    font-size: clamp(38px,7vw,64px) !important;
+    line-height: 1.08;
     margin-bottom: 18px;
-  }
-  .hero-body {
-    font-size: 16px;
-    line-height: 1.9;
-    color: var(--gray-light);
-    max-width: 600px;
-    margin-bottom: 36px;
-  }
-  .hero-body p { margin-bottom: 12px; }
-  .hero-body p:last-child { margin-bottom: 0; }
-  .cta-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    align-items: center;
-  }
-  .cta-primary {
-    background: var(--purple-core);
     color: #fff;
-    font-family: var(--ui);
-    font-weight: 600;
-    font-size: 16px;
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 999px;
-    display: inline-flex;
-    align-items: center;
-    box-shadow: 0 0 40px rgba(123,47,190,.4);
-    transition: transform .2s, box-shadow .2s;
   }
-  .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 0 60px rgba(123,47,190,.6); }
-  .cta-primary:focus-visible { outline: 2px solid var(--purple-bright); outline-offset: 3px; }
-  .cta-secondary {
+  .hero .rule {
+    width: 88px !important;
+    border: 0;
+    border-top: 2px solid var(--purple-bright);
+    margin: 0 0 22px;
+  }
+  .hero .def {
+    font-size: 18px;
+    line-height: 1.7;
     color: var(--gray-light);
-    font-size: 15px;
-    text-decoration: none;
-    transition: color .2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+    max-width: 620px;
+    margin-bottom: 14px;
   }
-  .cta-secondary:hover { color: #fff; }
-  .cta-secondary:focus-visible { outline: 2px solid var(--purple-bright); outline-offset: 2px; border-radius: 4px; }
+  .hero .sense-2 {
+    font-size: 17px !important;
+    color: var(--gray-light);
+  }
 
   /* ── SECTIONS ── */
   .section {
@@ -665,17 +625,12 @@
 
 <!-- ── HERO ── -->
 <section class="hero">
-  <span class="hero-eyebrow">For Professionals</span>
-  <h1>The session ends. Life continues.</h1>
-  <p class="hero-intro">MyDopa helps people preserve what happens in between.</p>
-  <div class="hero-body">
-    <p>A meaningful conversation can create insight. But the days that follow are where life actually happens.</p>
-    <p>MyDopa helps people capture lived evidence, reflect on what it may mean, and see progress accumulate over time—so they do not have to rely only on memory when they return to therapy, coaching, or another important conversation.</p>
-  </div>
-  <div class="cta-row">
-    <a href="#professional-preview" class="cta-primary" id="hero-cta">Join the Professional Preview</a>
-    <a href="#how-it-works" class="cta-secondary">See how MyDopa works ↓</a>
-  </div>
+<h1 class="word" style="font-size:clamp(38px,8vw,78px);"><span style="color:#fff;">My</span><span style="color:#A855F7;">Dopa</span><sup style="color:#A855F7;font-size:.32em;vertical-align:super;">™</sup> for Professionals</h1>
+<hr class="rule" style="width:320px;"/>
+<p class="def">The session ends. Life continues.</p>
+<p class="def sense-2" style="font-size:clamp(18px,2.4vw,24px);margin-top:14px;">MyDopa helps people preserve what happens in between.</p>
+<p class="def">A meaningful conversation can create insight. But the days that follow are where life actually happens.</p>
+<p class="def">MyDopa helps people capture lived evidence, reflect on what it may mean, and see progress accumulate over time—so they do not have to rely only on memory when they return to therapy, coaching, or another important conversation.</p>
 </section>
 
 <!-- ── THE CONTINUITY PROBLEM ── -->
