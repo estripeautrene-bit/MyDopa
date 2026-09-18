@@ -233,6 +233,15 @@
     font-size: 17px !important;
     color: var(--gray-light);
   }
+  .hero-thesis {
+    font-family: var(--fd);
+    font-weight: 900;
+    font-size: clamp(17px, 2.4vw, 21px);
+    color: var(--amber);
+    line-height: 1.5;
+    max-width: 620px;
+    margin-top: 28px;
+  }
 
   /* ── SECTIONS ── */
   .section {
@@ -256,7 +265,141 @@
     margin-bottom: 16px;
   }
   .section p:last-child { margin-bottom: 0; }
-  .section p strong { color: #fff; }
+
+  /* ── PRODUCT CARDS (how it works) ── */
+  .how-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 4px;
+  }
+  .how-item {
+    background: var(--navy-panel);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-left: 3px solid var(--amber);
+    border-radius: 12px;
+    padding: 24px 26px;
+  }
+  .how-item-name {
+    font-family: var(--fd);
+    font-weight: 900;
+    font-size: 17px;
+    color: var(--amber);
+    margin-bottom: 6px;
+  }
+  .how-item-body {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--gray-light);
+  }
+  .how-item-sub {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--gray-muted);
+  }
+  .how-item-sub strong {
+    color: var(--gray-light);
+    font-weight: 600;
+  }
+  .how-closer {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--gray-muted);
+    font-style: italic;
+    margin-top: 18px;
+  }
+
+  /* ── PULL QUOTE ── */
+  .pull-quote {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px 56px;
+  }
+  .pull-quote-inner {
+    background: rgba(255,176,32,0.06);
+    border-left: 3px solid var(--amber);
+    border-radius: 0 12px 12px 0;
+    padding: 26px 30px;
+  }
+  .pull-quote-inner p {
+    font-family: var(--fd);
+    font-style: italic;
+    font-weight: 700;
+    font-size: clamp(18px, 2.5vw, 24px);
+    line-height: 1.45;
+    color: #fff;
+    margin: 0;
+  }
+
+  /* ── SECTION HIGHLIGHT ── */
+  .section-highlight {
+    background: rgba(255,176,32,0.05);
+    border-left: 3px solid var(--amber);
+    border-radius: 0 12px 12px 0;
+    padding: 20px 26px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+  .section-highlight p {
+    font-family: var(--fd);
+    font-style: italic;
+    font-weight: 700;
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: 1.5;
+    color: #fff;
+    margin-bottom: 0 !important;
+  }
+
+  /* ── BRAND PANEL ── */
+  .brand-panel {
+    background: var(--navy-panel);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+    padding: 28px 30px;
+    margin-top: 4px;
+  }
+  .disambig {
+    color: var(--gray-light);
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+  .disambig:last-child { margin-bottom: 0; }
+  .disambig strong {
+    color: var(--amber);
+    font-family: var(--fd);
+    font-size: 18px;
+  }
+  .teaser {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .teaser a {
+    color: var(--purple-bright);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .teaser a:hover { text-decoration: underline; }
+
+  /* ── INFO BOX ── */
+  .info-box {
+    background: var(--navy-panel);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px;
+    padding: 28px 30px;
+    margin-top: 4px;
+  }
+  .info-box p {
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: var(--gray-light);
+    margin-bottom: 12px;
+  }
+  .info-box p:last-child { margin-bottom: 0; }
 
   /* ── EXTERNAL LINK ── */
   .ext-link { color: var(--purple-bright); text-decoration: none; }
@@ -539,9 +682,13 @@
     .section { padding: 44px 20px; }
     .faq-section { padding: 44px 20px; }
     .form-section { padding: 44px 20px 56px; }
+    .pull-quote { padding: 0 20px 44px; }
     .form-row { grid-template-columns: 1fr; }
     .footer-nav { grid-template-columns: 1fr; gap: 24px; }
     .form-wrap { padding: 24px 20px; }
+    .brand-panel,
+    .info-box { padding: 20px; }
+    .how-item { padding: 20px; }
   }
 </style>
 
@@ -570,20 +717,44 @@
 <hr class="rule" style="width:320px;"/>
 <p class="def">The session ends. Life continues.</p>
 <p class="def sense-2" style="font-size:clamp(18px,2.4vw,24px);margin-top:14px;">MyDopa helps people preserve what happens in between.</p>
-<p class="def">A therapy session, coaching conversation, or workshop creates insight. The days that follow show how that insight becomes part of real life.</p>
+<p class="def" style="margin-top:22px;">A therapy session, coaching conversation, or workshop creates insight. The days that follow show how that insight becomes part of real life.</p>
 <p class="def">MyDopa helps people capture that part — the everyday decisions, actions, reactions, and moments of progress that happen between meaningful conversations — and turns it into a record they can bring back into the room.</p>
-<p class="def"><strong>Athletes bring training data to coaches. Patients bring health data to doctors. MyDopa gives personal development the same thing: a record of what actually happened between conversations, owned by the person living it.</strong></p>
+<p class="hero-thesis">Athletes bring training data to coaches. Patients bring health data to doctors. MyDopa gives personal development its own record of what happens between conversations.</p>
 </section>
 
 <!-- ── HOW IT WORKS ── -->
 <section class="section" id="how-it-works">
   <h2>How it works</h2>
-  <p><strong>MyToday™ is the entry screen.</strong> The user records meaningful moments as they happen — a difficult conversation handled well, a boundary held, an intention carried out, or a decision that reflects change.</p>
-  <p><strong>MyYesterday™ is the reflection conversation with Dopa.</strong> It helps the user make sense of what they captured in the context of earlier experiences and carry useful context forward.</p>
-  <p><strong>MyProgress™ brings the accumulated record together over time.</strong> It shows recurring themes, intentions and follow-through, periods of consistency, interruptions and returns, and patterns of change that become visible across weeks and months.</p>
-  <p><strong>Resilience Horizon™ is a view inside MyProgress that shows patterns of engagement over time — periods of consistency, interruption, return, and continuation.</strong> It helps the user see how their engagement changes across different periods of life and gives context to what happens after a gap.</p>
-  <p>The feature surfaces the pattern. The user and, when relevant, the professional can interpret that pattern in context.</p>
+  <div class="how-stack">
+
+    <div class="how-item">
+      <div class="how-item-name">MyToday™</div>
+      <p class="how-item-body">The entry screen. The user records meaningful moments as they happen — a difficult conversation handled well, a boundary held, an intention carried out, or a decision that reflects change.</p>
+    </div>
+
+    <div class="how-item">
+      <div class="how-item-name">MyYesterday™</div>
+      <p class="how-item-body">The reflection conversation with Dopa. It helps the user make sense of what they captured in the context of earlier experiences and carry useful context forward.</p>
+    </div>
+
+    <div class="how-item">
+      <div class="how-item-name">MyProgress™</div>
+      <p class="how-item-body">The accumulated record over time. It shows recurring themes, intentions and follow-through, periods of consistency, interruptions and returns, and patterns of change that become visible across weeks and months.</p>
+      <div class="how-item-sub">
+        <strong>Resilience Horizon™</strong> is a view inside MyProgress that shows patterns of engagement over time — periods of consistency, interruption, return, and continuation. It helps the user see how their engagement changes across different periods of life and gives context to what happens after a gap.
+      </div>
+    </div>
+
+  </div>
+  <p class="how-closer">The feature surfaces the pattern. The user and, when relevant, the professional can interpret that pattern in context.</p>
 </section>
+
+<!-- ── PULL QUOTE ── -->
+<div class="pull-quote">
+  <div class="pull-quote-inner">
+    <p>MyDopa gives personal development something most people have never had: a record of what actually happened between conversations.</p>
+  </div>
+</div>
 
 <!-- ── WHY THIS MATTERS FOR YOUR PRACTICE ── -->
 <section class="section">
@@ -591,27 +762,35 @@
   <p>A client arriving with three months of captured intentions, actions, experiences, and outcomes creates a richer starting point for conversation.</p>
   <p>When the client chooses to share it, MyDopa gives the professional a longitudinal record of what the person actually experienced and applied between conversations.</p>
   <p>That record can include recurring themes, follow-through on intentions, changes in response to familiar situations, patterns of engagement and return, and progress that becomes visible through accumulation.</p>
-  <p><strong>The professional brings expertise, judgment, and context. MyDopa gives the person a richer record to bring into the conversation.</strong></p>
-  <p>The user controls what they capture and what they share.</p>
+  <div class="section-highlight">
+    <p>The professional brings expertise, judgment, and context. MyDopa gives the person a richer record to bring into the conversation.</p>
+  </div>
+  <p style="margin-top:16px;">The user controls what they capture and what they share.</p>
 </section>
 
 <!-- ── THE PRACTICE AND THE EQUIPMENT ── -->
 <section class="section">
   <h2>The practice and the equipment</h2>
-  <p><strong>MyHGY™ is the practice. MyDopa™ is the equipment.</strong></p>
-  <p>MyHGY gives someone a simple practice they can begin today.</p>
-  <p>MyDopa gives that practice a persistent, structured record that grows more useful over time.</p>
-  <p><a href="https://haveagreatyesterday.com/for-professionals" class="ext-link" id="myhgy-pro-link">Explore MyHGY for Professionals →</a></p>
+  <div class="brand-panel">
+    <p class="disambig"><strong>MyHGY™ is the practice. MyDopa™ is the equipment.</strong></p>
+    <p class="disambig">MyHGY gives someone a simple practice they can begin today.</p>
+    <p class="disambig">MyDopa gives that practice a persistent, structured record that grows more useful over time.</p>
+    <div class="teaser">
+      <a href="https://haveagreatyesterday.com/for-professionals" id="myhgy-pro-link">Explore MyHGY for Professionals →</a>
+    </div>
+  </div>
 </section>
 
 <!-- ── THE USER STAYS IN CONTROL ── -->
 <section class="section">
   <h2>The user stays in control</h2>
-  <p>MyDopa is a personal-development and continuity tool designed to complement therapy, psychology, coaching, executive coaching, learning, and other forms of professional support.</p>
-  <p>The user owns their MyDopa experience.</p>
-  <p>The user chooses what they capture, what they preserve, and what they share.</p>
-  <p>Clinical diagnosis, treatment, crisis care, and professional judgment remain within the appropriate professional relationship.</p>
-  <p>MyDopa focuses on helping the user create a clearer record of lived experience and progress.</p>
+  <div class="info-box">
+    <p>MyDopa is a personal-development and continuity tool designed to complement therapy, psychology, coaching, executive coaching, learning, and other forms of professional support.</p>
+    <p>The user owns their MyDopa experience.</p>
+    <p>The user chooses what they capture, what they preserve, and what they share.</p>
+    <p>Clinical diagnosis, treatment, crisis care, and professional judgment remain within the appropriate professional relationship.</p>
+    <p>MyDopa focuses on helping the user create a clearer record of lived experience and progress.</p>
+  </div>
 </section>
 
 <!-- ── FAQ ── -->
