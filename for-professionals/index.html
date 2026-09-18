@@ -52,39 +52,63 @@
       "name": "What is MyDopa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "MyDopa is a personal-development tool designed to help people capture lived evidence, reflect on what happened, and make progress visible over time."
+        "text": "MyDopa is a personal-development app that helps people record meaningful moments, reflect on them, and see their progress accumulate over time."
       }
     },
     {
       "@type": "Question",
-      "name": "Is MyDopa therapy?",
+      "name": "What is MyToday?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. MyDopa is not therapy, diagnosis, treatment, or crisis care. It is a personal-development and continuity tool designed to support the individual's own practice between meaningful conversations and experiences."
+        "text": "MyToday is the entry screen where the user records meaningful moments from everyday life as they happen."
       }
     },
     {
       "@type": "Question",
-      "name": "Does MyDopa replace a therapist or coach?",
+      "name": "What is MyYesterday?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. MyDopa is designed to complement, not replace, professional relationships. The user decides what, if anything, they bring from MyDopa into therapy, coaching, or another professional conversation."
+        "text": "MyYesterday is the reflection conversation with Dopa. It works with the user's captured experiences and relevant history to help them understand what those experiences may show."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I recommend MyDopa to a client?",
+      "name": "What is MyProgress?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Once MyDopa becomes available, professionals may choose to recommend it when they believe the practice could be useful to an individual. We are not building the professional recommendation model around referral commissions."
+        "text": "MyProgress is where the user sees their personal-development record take shape over time."
       }
     },
     {
       "@type": "Question",
-      "name": "What does MyDopa share with the professional?",
+      "name": "What is Resilience Horizon?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "MyDopa belongs to the user. The user chooses what information, if any, they share with a therapist, coach, psychologist, or other professional."
+        "text": "Resilience Horizon is a MyProgress view that shows the user's pattern of engagement over time, including periods of consistency, interruption, return, and continuation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can MyDopa support therapy or coaching?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clients can bring concrete material from the time between conversations — intentions, actions, recurring themes, changing responses, patterns of engagement, and accumulated progress."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who owns the information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The user. They choose what to capture and what to share."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I recommend MyDopa to clients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Professionals can recommend MyDopa when they believe a persistent personal-development record would be useful to the person they work with."
       }
     },
     {
@@ -92,7 +116,7 @@
       "name": "Can professionals help shape MyDopa?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. We are inviting interested professionals to join the Professional Preview so we can learn from the people who work closely with individuals over time."
+        "text": "Yes. We are inviting therapists, psychologists, coaches, executive coaches, L&D professionals, and related practitioners into the Professional Preview to contribute perspective before launch."
       }
     }
   ]
@@ -232,88 +256,7 @@
     margin-bottom: 16px;
   }
   .section p:last-child { margin-bottom: 0; }
-
-  /* ── FEATURE CARDS ── */
-  .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-top: 32px;
-  }
-  .feature-card {
-    background: var(--navy-panel);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-top: 2px solid var(--amber);
-    border-radius: 12px;
-    padding: 26px 22px;
-  }
-  .fc-name {
-    font-family: var(--fd);
-    font-weight: 900;
-    font-size: 19px;
-    color: var(--amber);
-    margin-bottom: 8px;
-  }
-  .fc-lead {
-    font-size: 14px;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.45;
-    margin-bottom: 14px;
-  }
-  .fc-body {
-    font-size: 13.5px;
-    line-height: 1.75;
-    color: var(--gray-light);
-  }
-
-  /* ── HIGHLIGHT STATEMENT ── */
-  .highlight {
-    background: rgba(255,176,32,0.05);
-    border-left: 3px solid var(--amber);
-    border-radius: 0 12px 12px 0;
-    padding: 22px 28px;
-    margin-top: 32px;
-  }
-  .highlight p {
-    font-family: var(--fd);
-    font-size: clamp(17px, 2.3vw, 22px);
-    font-style: italic;
-    font-weight: 700;
-    line-height: 1.5;
-    color: #fff;
-    margin-bottom: 0 !important;
-  }
-
-  /* ── BOUNDARY GRID ── */
-  .boundary-grid {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin: 24px 0;
-  }
-  .boundary-item {
-    font-size: 14.5px;
-    color: var(--gray-light);
-    padding: 12px 16px;
-    background: var(--navy-panel);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 10px;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .boundary-item::before {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--purple-bright);
-    flex-shrink: 0;
-    margin-top: 5px;
-  }
+  .section p strong { color: #fff; }
 
   /* ── EXTERNAL LINK ── */
   .ext-link { color: var(--purple-bright); text-decoration: none; }
@@ -596,9 +539,7 @@
     .section { padding: 44px 20px; }
     .faq-section { padding: 44px 20px; }
     .form-section { padding: 44px 20px 56px; }
-    .feature-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
-    .boundary-grid { grid-template-columns: 1fr; }
     .footer-nav { grid-template-columns: 1fr; gap: 24px; }
     .form-wrap { padding: 24px 20px; }
   }
@@ -629,144 +570,114 @@
 <hr class="rule" style="width:320px;"/>
 <p class="def">The session ends. Life continues.</p>
 <p class="def sense-2" style="font-size:clamp(18px,2.4vw,24px);margin-top:14px;">MyDopa helps people preserve what happens in between.</p>
-<p class="def">A meaningful conversation can create insight. But the days that follow are where life actually happens.</p>
-<p class="def">MyDopa helps people capture lived evidence, reflect on what it may mean, and see progress accumulate over time—so they do not have to rely only on memory when they return to therapy, coaching, or another important conversation.</p>
+<p class="def">A therapy session, coaching conversation, or workshop creates insight. The days that follow show how that insight becomes part of real life.</p>
+<p class="def">MyDopa helps people capture that part — the everyday decisions, actions, reactions, and moments of progress that happen between meaningful conversations — and turns it into a record they can bring back into the room.</p>
+<p class="def"><strong>Athletes bring training data to coaches. Patients bring health data to doctors. MyDopa gives personal development the same thing: a record of what actually happened between conversations, owned by the person living it.</strong></p>
 </section>
 
-<!-- ── THE CONTINUITY PROBLEM ── -->
-<section class="section">
-  <h2>What happens between conversations matters.</h2>
-  <p>A therapy session ends.</p>
-  <p>A coaching conversation ends.</p>
-  <p>A course ends.</p>
-  <p>A meaningful realization passes.</p>
-  <p>Then life continues.</p>
-  <p>People make decisions, handle difficult moments, follow through, avoid things, recover, learn, connect, and change.</p>
-  <p>Much of that evidence disappears before the next conversation.</p>
-  <p><span class="brand-inline"><span class="brand-my">My</span><span class="brand-dopa">Dopa</span><sup class="brand-sup">™</sup></span> is being built to help preserve it.</p>
-</section>
-
-<!-- ── HOW MYDOPA WORKS ── -->
+<!-- ── HOW IT WORKS ── -->
 <section class="section" id="how-it-works">
-  <h2>A clearer record of what actually happened.</h2>
-  <div class="feature-grid">
-    <div class="feature-card">
-      <div class="fc-name">MyToday™</div>
-      <div class="fc-lead">Capture meaningful evidence while life is happening.</div>
-      <div class="fc-body">A better reaction. A promise kept. A difficult conversation handled differently. A moment of courage, connection, learning, recovery, or follow-through.</div>
-    </div>
-    <div class="feature-card">
-      <div class="fc-name">MyYesterday™</div>
-      <div class="fc-lead">Reflect on the evidence with context.</div>
-      <div class="fc-body">MyYesterday helps the user look at what happened, notice what may matter, and preserve continuity without forcing every experience into a positive interpretation.</div>
-    </div>
-    <div class="feature-card">
-      <div class="fc-name">MyProgress™</div>
-      <div class="fc-lead">See what individual moments become over time.</div>
-      <div class="fc-body">Patterns, returns, recurring themes, changing responses, and visible evidence of progress begin to accumulate.</div>
-    </div>
-  </div>
+  <h2>How it works</h2>
+  <p><strong>MyToday™ is the entry screen.</strong> The user records meaningful moments as they happen — a difficult conversation handled well, a boundary held, an intention carried out, or a decision that reflects change.</p>
+  <p><strong>MyYesterday™ is the reflection conversation with Dopa.</strong> It helps the user make sense of what they captured in the context of earlier experiences and carry useful context forward.</p>
+  <p><strong>MyProgress™ brings the accumulated record together over time.</strong> It shows recurring themes, intentions and follow-through, periods of consistency, interruptions and returns, and patterns of change that become visible across weeks and months.</p>
+  <p><strong>Resilience Horizon™ is a view inside MyProgress that shows patterns of engagement over time — periods of consistency, interruption, return, and continuation.</strong> It helps the user see how their engagement changes across different periods of life and gives context to what happens after a gap.</p>
+  <p>The feature surfaces the pattern. The user and, when relevant, the professional can interpret that pattern in context.</p>
 </section>
 
-<!-- ── PROFESSIONAL UTILITY ── -->
+<!-- ── WHY THIS MATTERS FOR YOUR PRACTICE ── -->
 <section class="section">
-  <h2>Better continuity. Better conversations.</h2>
-  <p>The value to the professional is simple.</p>
-  <p>Instead of asking a person to reconstruct the last week or two entirely from memory, <span class="brand-inline"><span class="brand-my">My</span><span class="brand-dopa">Dopa</span><sup class="brand-sup">™</sup></span> may help them return with a richer record of what actually happened.</p>
-  <p>That record belongs to the user.</p>
-  <p>They choose what they capture, what they keep, and what they bring into a professional conversation.</p>
-  <p><span class="brand-inline"><span class="brand-my">My</span><span class="brand-dopa">Dopa</span><sup class="brand-sup">™</sup></span> is not designed to replace the therapist, psychologist, coach, or other professional.</p>
-  <p>It is designed to help the person preserve more of the life that happens between those conversations.</p>
-  <div class="highlight">
-    <p>The session ends. Life continues. MyDopa helps preserve what happens in between.</p>
-  </div>
+  <h2>Why this matters for your practice</h2>
+  <p>A client arriving with three months of captured intentions, actions, experiences, and outcomes creates a richer starting point for conversation.</p>
+  <p>When the client chooses to share it, MyDopa gives the professional a longitudinal record of what the person actually experienced and applied between conversations.</p>
+  <p>That record can include recurring themes, follow-through on intentions, changes in response to familiar situations, patterns of engagement and return, and progress that becomes visible through accumulation.</p>
+  <p><strong>The professional brings expertise, judgment, and context. MyDopa gives the person a richer record to bring into the conversation.</strong></p>
+  <p>The user controls what they capture and what they share.</p>
 </section>
 
-<!-- ── WHY RECOMMEND IT ── -->
+<!-- ── THE PRACTICE AND THE EQUIPMENT ── -->
 <section class="section">
-  <h2>Recommend it because it is useful.</h2>
-  <p>We are not building <span class="brand-inline"><span class="brand-my">My</span><span class="brand-dopa">Dopa</span><sup class="brand-sup">™</sup></span> around referral commissions for therapists, psychologists, or coaches.</p>
-  <p>The goal is simpler.</p>
-  <p>If <span class="brand-inline"><span class="brand-my">My</span><span class="brand-dopa">Dopa</span><sup class="brand-sup">™</sup></span> helps a person notice more, preserve useful evidence, and arrive at future conversations with greater continuity, a professional may choose to recommend it because it supports the work they are already doing together.</p>
-  <p>Trust matters more than an affiliate relationship.</p>
+  <h2>The practice and the equipment</h2>
+  <p><strong>MyHGY™ is the practice. MyDopa™ is the equipment.</strong></p>
+  <p>MyHGY gives someone a simple practice they can begin today.</p>
+  <p>MyDopa gives that practice a persistent, structured record that grows more useful over time.</p>
+  <p><a href="https://haveagreatyesterday.com/for-professionals" class="ext-link" id="myhgy-pro-link">Explore MyHGY for Professionals →</a></p>
 </section>
 
-<!-- ── SCIENTIFIC DISCIPLINE ── -->
+<!-- ── THE USER STAYS IN CONTROL ── -->
 <section class="section">
-  <h2>Built with scientific discipline.</h2>
-  <p><span class="brand-inline"><span class="brand-my">My</span><span class="brand-dopa">Dopa</span><sup class="brand-sup">™</sup></span> is informed by established research in areas including progress monitoring, self-efficacy, reflection, behavior change, self-regulation, implementation intentions, and longitudinal self-observation.</p>
-  <p>We are also developing a formal research initiative to study <span class="brand-inline"><span class="brand-my">My</span><span class="brand-dopa">Dopa</span><sup class="brand-sup">™</sup></span> directly.</p>
-  <p>The objective is not to borrow scientific authority.</p>
-  <p>It is to measure carefully, make only claims the evidence supports, and improve the product through serious research.</p>
-</section>
-
-<!-- ── MYHGY RELATIONSHIP ── -->
-<section class="section">
-  <h2>The practice and the equipment.</h2>
-  <p>MyHGY™ teaches the practice.</p>
-  <p><span class="brand-inline"><span class="brand-my">My</span><span class="brand-dopa">Dopa</span><sup class="brand-sup">™</sup></span> provides the equipment for continuing it, preserving the evidence, interpreting what happened, and making progress visible over time.</p>
-  <p>If a professional wants a simple shareable practice first, MyHGY™ can be introduced independently.</p>
-  <p>If someone wants the deeper continuity system, <span class="brand-inline"><span class="brand-my">My</span><span class="brand-dopa">Dopa</span><sup class="brand-sup">™</sup></span> is the product.</p>
-  <p><a href="https://haveagreatyesterday.com/for-professionals" class="ext-link" id="myhgy-pro-link">Explore MyHGY™ for Professionals →</a></p>
-</section>
-
-<!-- ── BOUNDARIES ── -->
-<section class="section">
-  <h2>Clear boundaries matter.</h2>
-  <p><span class="brand-inline"><span class="brand-my">My</span><span class="brand-dopa">Dopa</span><sup class="brand-sup">™</sup></span> is a personal-development and continuity tool.</p>
-  <ul class="boundary-grid" aria-label="What MyDopa is not">
-    <li class="boundary-item">It is not therapy.</li>
-    <li class="boundary-item">It is not diagnosis.</li>
-    <li class="boundary-item">It is not treatment.</li>
-    <li class="boundary-item">It is not crisis care.</li>
-    <li class="boundary-item">It is not a substitute for professional judgment or professional support.</li>
-  </ul>
-  <p><span class="brand-inline"><span class="brand-my">My</span><span class="brand-dopa">Dopa</span><sup class="brand-sup">™</sup></span> belongs to the user. The user decides what information, if any, they share with another person.</p>
+  <h2>The user stays in control</h2>
+  <p>MyDopa is a personal-development and continuity tool designed to complement therapy, psychology, coaching, executive coaching, learning, and other forms of professional support.</p>
+  <p>The user owns their MyDopa experience.</p>
+  <p>The user chooses what they capture, what they preserve, and what they share.</p>
+  <p>Clinical diagnosis, treatment, crisis care, and professional judgment remain within the appropriate professional relationship.</p>
+  <p>MyDopa focuses on helping the user create a clearer record of lived experience and progress.</p>
 </section>
 
 <!-- ── FAQ ── -->
 <section class="faq-section">
-  <h2>Questions professionals may have.</h2>
+  <h2>Questions professionals may have</h2>
 
   <details>
     <summary>What is MyDopa?</summary>
     <div class="faq-answer">
-      <p>MyDopa is a personal-development tool designed to help people capture lived evidence, reflect on what happened, and make progress visible over time.</p>
+      <p>MyDopa is a personal-development app that helps people record meaningful moments, reflect on them, and see their progress accumulate over time.</p>
     </div>
   </details>
 
   <details>
-    <summary>Is MyDopa therapy?</summary>
+    <summary>What is MyToday?</summary>
     <div class="faq-answer">
-      <p>No. MyDopa is not therapy, diagnosis, treatment, or crisis care. It is a personal-development and continuity tool designed to support the individual's own practice between meaningful conversations and experiences.</p>
+      <p>MyToday is the entry screen where the user records meaningful moments from everyday life as they happen.</p>
     </div>
   </details>
 
   <details>
-    <summary>Does MyDopa replace a therapist or coach?</summary>
+    <summary>What is MyYesterday?</summary>
     <div class="faq-answer">
-      <p>No. MyDopa is designed to complement, not replace, professional relationships. The user decides what, if anything, they bring from MyDopa into therapy, coaching, or another professional conversation.</p>
+      <p>MyYesterday is the reflection conversation with Dopa. It works with the user's captured experiences and relevant history to help them understand what those experiences may show.</p>
     </div>
   </details>
 
   <details>
-    <summary>Can I recommend MyDopa to a client?</summary>
+    <summary>What is MyProgress?</summary>
     <div class="faq-answer">
-      <p>Once MyDopa becomes available, professionals may choose to recommend it when they believe the practice could be useful to an individual. We are not building the professional recommendation model around referral commissions.</p>
+      <p>MyProgress is where the user sees their personal-development record take shape over time.</p>
     </div>
   </details>
 
   <details>
-    <summary>What does MyDopa share with the professional?</summary>
+    <summary>What is Resilience Horizon?</summary>
     <div class="faq-answer">
-      <p>MyDopa belongs to the user. The user chooses what information, if any, they share with a therapist, coach, psychologist, or other professional.</p>
+      <p>Resilience Horizon is a MyProgress view that shows the user's pattern of engagement over time, including periods of consistency, interruption, return, and continuation.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>How can MyDopa support therapy or coaching?</summary>
+    <div class="faq-answer">
+      <p>Clients can bring concrete material from the time between conversations — intentions, actions, recurring themes, changing responses, patterns of engagement, and accumulated progress.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Who owns the information?</summary>
+    <div class="faq-answer">
+      <p>The user. They choose what to capture and what to share.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Can I recommend MyDopa to clients?</summary>
+    <div class="faq-answer">
+      <p>Yes. Professionals can recommend MyDopa when they believe a persistent personal-development record would be useful to the person they work with.</p>
     </div>
   </details>
 
   <details>
     <summary>Can professionals help shape MyDopa?</summary>
     <div class="faq-answer">
-      <p>Yes. We are inviting interested professionals to join the Professional Preview so we can learn from the people who work closely with individuals over time.</p>
+      <p>Yes. We are inviting therapists, psychologists, coaches, executive coaches, L&amp;D professionals, and related practitioners into the Professional Preview to contribute perspective before launch.</p>
     </div>
   </details>
 </section>
