@@ -354,6 +354,31 @@ Deno.serve(async (req) => {
     })
   }
 
+  // ── professional_preview: save contact + answers, no email send ──
+  if (stage === 'professional_preview') {
+    const { error } = await supabase
+      .from('waitlist_subscribers')
+      .upsert({
+        email,
+        first_name,
+        quiz_answers:      answers,
+        consent_status:    'subscribed',
+        consent_timestamp: new Date().toISOString(),
+        consent_version,
+        consent_source,
+      }, { onConflict: 'email' })
+
+    if (error) {
+      console.error('Supabase upsert error:', error)
+      return new Response(JSON.stringify({ error: 'Database error' }), {
+        status: 500, headers: { ...CORS, 'Content-Type': 'application/json' },
+      })
+    }
+    return new Response(JSON.stringify({ ok: true }), {
+      status: 200, headers: { ...CORS, 'Content-Type': 'application/json' },
+    })
+  }
+
   // ── quiz_completed: guard against double email send ──
   const { data: existing } = await supabase
     .from('waitlist_subscribers')
