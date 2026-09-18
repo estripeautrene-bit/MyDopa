@@ -45,6 +45,7 @@ FIXED_PAGES = [
     (f"{BASE}/grief-loss",                             "0.9"),
     (f"{BASE}/divorce-breakups",                       "0.9"),
     (f"{BASE}/midlife-identity-crisis",                "0.9"),
+    (f"{BASE}/for-professionals",                      "0.9"),
 ]
 
 ENTRY = "  <url>\n    <loc>{loc}</loc>\n    <priority>{prio}</priority>\n  </url>"
