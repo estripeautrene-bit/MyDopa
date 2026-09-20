@@ -608,4 +608,20 @@
     <loc>https://mydopa.app/blog/youre-not-chasing-the-thing-youre-chasing-a-feeling</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://mydopa.app/blog/everything-feels-equally-important</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/blog/mind-for-having-ideas-not-holding-them</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/blog/high-performers-racing-mind</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/blog/how-to-get-thoughts-out-of-your-head-before-bed</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
