@@ -289,6 +289,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mydopa.app/blog/racing-mind-vs-anxiety</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mydopa.app/blog/recognizing-arrival-fallacy-in-high-achieving-clients</loc>
     <priority>0.8</priority>
   </url>
@@ -373,6 +377,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mydopa.app/blog/the-nervous-system-reason-your-mind-wont-shut-off</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/blog/the-open-tabs-feeling</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mydopa.app/blog/the-progress-you-only-see-in-reverse</loc>
     <priority>0.8</priority>
   </url>
@@ -389,11 +401,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mydopa.app/blog/the-superhighway-brain</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mydopa.app/blog/the-three-hour-drive</loc>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mydopa.app/blog/today-and-myprogress</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/blog/too-many-open-loops</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -485,6 +505,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mydopa.app/blog/why-just-focus-doesnt-work-for-a-racing-mind</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mydopa.app/blog/why-most-people-never-actually-commit-to-a-goal</loc>
     <priority>0.8</priority>
   </url>
@@ -506,6 +530,10 @@
   </url>
   <url>
     <loc>https://mydopa.app/blog/why-self-sabotage-happens</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/blog/why-silence-makes-a-racing-mind-louder</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -534,6 +562,10 @@
   </url>
   <url>
     <loc>https://mydopa.app/blog/why-you-think-youre-not-good-enough</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mydopa.app/blog/why-your-mind-wont-stop-racing</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -574,38 +606,6 @@
   </url>
   <url>
     <loc>https://mydopa.app/blog/youre-not-chasing-the-thing-youre-chasing-a-feeling</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mydopa.app/blog/racing-mind-vs-anxiety</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mydopa.app/blog/the-nervous-system-reason-your-mind-wont-shut-off</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mydopa.app/blog/the-open-tabs-feeling</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mydopa.app/blog/the-superhighway-brain</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mydopa.app/blog/too-many-open-loops</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mydopa.app/blog/why-just-focus-doesnt-work-for-a-racing-mind</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mydopa.app/blog/why-silence-makes-a-racing-mind-louder</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://mydopa.app/blog/why-your-mind-wont-stop-racing</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
