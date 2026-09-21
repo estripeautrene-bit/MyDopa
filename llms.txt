@@ -67,6 +67,7 @@ MyDopa™ is a daily progress-capture app that makes invisible personal progress
 - [Daily Personal Development](https://mydopa.app/personal-development): How to practice personal development continuously, make personal progress visible, preserve evidence of growth, and understand how MyDopa supports daily development across real life.
 - [Personal Development Deserves a Practice™](https://mydopa.app/personal-development-deserves-a-practice): Why personal development requires more than insight or intention — and what a repeatable daily practice actually looks like.
 - [Visibility and Continuity™](https://mydopa.app/visibility-and-continuity): Why progress that isn't visible eventually stops being real, and why continuity — not intensity — is what a practice actually requires.
+- [MyDiscoveries™](https://mydopa.app/discoveries): The educational layer of MyDopa™, organized around five pillars — Mindset, Emotions, Body, Goals, and Relationships — connecting useful ideas with lived experience across the full MyDopa practice.
 
 ## For Organizations
 
