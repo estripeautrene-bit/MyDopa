@@ -626,11 +626,8 @@ footer{
     <span class="logo-text"><span class="d">My</span><span class="m">Dopa</span><span class="tm">™</span></span>
   </a>
   <div class="nav-links">
-    <a href="/meaning" class="nav-link">Meaning</a>
-    <a href="/examples" class="nav-link">Examples</a>
-    <a href="/word-mirrors" class="nav-link">Word mirrors</a>
-    <a href="/feelings" class="nav-link">Feelings</a>
-    <a href="/blog" class="nav-link">Blog</a>
+    <a href="/discoveries/" class="nav-link">MyDiscoveries™</a>
+    <a href="/practice/" class="nav-link">The Practice</a>
     <a href="/personal-development" class="nav-link">Personal Development</a>
     <a href="/for-professionals" class="nav-link">For Professionals</a>
     <a href="/for-organizations" class="nav-link">For Organizations</a>
@@ -639,11 +636,8 @@ footer{
   </div>
 </nav>
 <div class="nav-mobile-menu" id="navMobileMenu">
-  <a href="/meaning">Meaning</a>
-  <a href="/examples">Examples</a>
-  <a href="/word-mirrors">Word mirrors</a>
-  <a href="/feelings">Feelings</a>
-  <a href="/blog">Blog</a>
+  <a href="/discoveries/">MyDiscoveries™</a>
+  <a href="/practice/">The Practice</a>
   <a href="/personal-development">Personal Development</a>
   <a href="/for-professionals">For Professionals</a>
   <a href="/for-organizations">For Organizations</a>
@@ -880,16 +874,12 @@ footer{
   <a href="/visibility-and-continuity/">Visibility and Continuity™</a>
   <a href="/personal-development-deserves-a-practice/">Personal Development Deserves a Practice™</a>
   <a href="/self-efficacy/">Self-Efficacy™</a>
-  <a href="/discoveries/">MyDiscoveries™</a>
+  <a href="/accuracy-clarity-self-confidence/">Accuracy, Clarity, and Self-Confidence™</a>
   </div>
   <div class="footer-col">
-  <h4>For Professionals</h4>
+  <h4>For</h4>
+  <a href="/for-professionals/">For Professionals</a>
   <a href="/for-organizations/">For Organizations</a>
-  <a href="/personal-development/">Personal Development</a>
-  <a href="/self-efficacy/">Self-Efficacy™</a>
-  <a href="/accuracy-clarity-self-confidence/">Accuracy, Clarity, and Self-Confidence™</a>
-  <a href="/feelings-are-not-facts/">Feelings Are Not Facts™</a>
-  <a href="/visibility-and-continuity/">Visibility and Continuity™</a>
   </div>
   <div class="footer-col">
   <h4>Company</h4>
@@ -1218,6 +1208,7 @@ function openCookieBanner(e){
   document.getElementById('cookieBanner').style.display='flex';
 }
 if(localStorage.getItem('cookieChoice')) document.getElementById('cookieBanner').style.display='none';
+if(location.search.includes('cookie-settings')) openCookieBanner();
 
 // ── HAMBURGER ──
 (function(){
