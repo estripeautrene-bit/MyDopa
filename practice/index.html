@@ -87,8 +87,9 @@
     padding:16px 36px;
     display:flex;
     align-items:center;
-    gap:28px;
+    justify-content:space-between;
   }
+  .nav-links { display:flex; align-items:center; gap:28px; }
 
   .wordmark {
     font-family:var(--fd);
@@ -106,7 +107,7 @@
   .nav-home {
     color:var(--gray-muted);
     text-decoration:none;
-    font-size:14px;
+    font-size:13px;
   }
 
   .cta-pill {
@@ -310,6 +311,7 @@
       flex-wrap:wrap;
       justify-content:center;
     }
+    .nav-links { display:none; }
 
     .nav-home {
       order:3;
@@ -344,12 +346,10 @@
 
 /* ── nav alignment fix ── */
 a.wordmark { text-decoration:none; }
-.cta-pill { margin-left:auto; }
-@media (max-width:640px) { .cta-pill { margin-left:0; } }
 /* ── back link ── */
-.back-link { display:block; text-align:center; font-size:13px; padding:16px 24px 0; }
-.back-link a { color:var(--gray-muted,#6B7280); text-decoration:none; transition:color .15s; }
-.back-link a:hover { color:#fff; }
+.back-link { display:block; text-align:center; font-size:13px; font-weight:500; padding:14px 0 10px; }
+.back-link a { color:var(--purple-bright,#A855F7); text-decoration:none; transition:opacity .15s; }
+.back-link a:hover { opacity:.75; }
 </style>
 <style>
   /* page-specific: long-form prose section */
@@ -413,16 +413,36 @@ a.wordmark { text-decoration:none; }
   .footer-col a:hover{color:#fff;}
   @media(max-width:640px){.footer-nav{grid-template-columns:1fr;gap:24px;}}
 </style>
+<style>
+/* ── NAV — exact homepage match ── */
+body > nav { position:fixed; top:0; left:0; right:0; z-index:200; display:flex; align-items:center; justify-content:space-between; padding:16px 36px; background:rgba(6,0,13,0.88); backdrop-filter:blur(24px); border-bottom:1px solid rgba(168,85,247,0.07); }
+body { padding-top:76px; }
+.logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.logo-text { font-family:var(--fd); font-size:32px; font-weight:900; letter-spacing:-0.3px; }
+.logo-text .d { color:#fff; font-weight:900; }
+.logo-text .m { color:var(--purple-bright); font-weight:600; }
+.logo-text .tm { font-size:.36em; font-weight:700; vertical-align:super; color:#B57BF7; margin-left:.04em; }
+.nav-cta { font-size:13px; font-weight:600; color:#fff; text-decoration:none; padding:9px 20px; border-radius:999px; background:var(--purple-core); transition:opacity .2s,transform .2s; }
+.nav-cta:hover { opacity:.9; transform:translateY(-1px); }
+.nav-links { display:flex; align-items:center; gap:28px; }
+.nav-link { font-size:13px; color:var(--gray-muted,#6B7280); text-decoration:none; transition:color .2s; }
+.nav-link:hover { color:#fff; }
+@media(max-width:800px) { body > nav { padding:14px 20px; } .nav-links { display:none; } }
+</style>
 </head>
 <body>
-<nav class="nav">
-<a class="wordmark" href="/"><span class="my">My</span><span class="dopa">Dopa</span><sup>™</sup></a>
-<a class="nav-home" href="/discoveries/">MyDiscoveries™</a>
-<a class="nav-home" href="/practice/">The Practice</a>
-<a class="nav-home" href="/personal-development/">Personal Development</a>
-<a class="nav-home" href="/for-professionals/">For Professionals</a>
-<a class="nav-home" href="/for-organizations/">For Organizations</a>
-<a class="cta-pill" href="/?quiz=open">Join the waitlist →</a>
+<nav>
+  <a href="/" class="logo">
+    <span class="logo-text"><span class="d">My</span><span class="m">Dopa</span><span class="tm">™</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="/discoveries/" class="nav-link">MyDiscoveries™</a>
+    <a href="/practice/" class="nav-link">The Practice</a>
+    <a href="/personal-development/" class="nav-link">Personal Development</a>
+    <a href="/for-professionals/" class="nav-link">For Professionals</a>
+    <a href="/for-organizations/" class="nav-link">For Organizations</a>
+    <a href="/?quiz=open" class="nav-cta">Join the waitlist →</a>
+  </div>
 </nav>
 <p class="back-link"><a href="/">← Back to MyDopa</a></p>
 <section class="hero">
