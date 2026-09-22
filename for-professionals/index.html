@@ -170,11 +170,10 @@
 
   /* ── NAV ── */
   .nav {
-    padding: 22px 24px;
+    padding:16px 36px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+    gap:28px;
   }
   .wordmark {
     font-family: var(--fd);
@@ -690,6 +689,15 @@
     .info-box { padding: 20px; }
     .how-item { padding: 20px; }
   }
+
+/* ── nav alignment fix ── */
+a.wordmark { text-decoration:none; }
+.cta-pill { margin-left:auto; }
+@media (max-width:640px) { .cta-pill { margin-left:0; } }
+/* ── back link ── */
+.back-link { display:block; text-align:center; font-size:13px; padding:16px 24px 0; }
+.back-link a { color:var(--gray-muted,#6B7280); text-decoration:none; transition:color .15s; }
+.back-link a:hover { color:#fff; }
 </style>
 
 <script>
@@ -704,7 +712,7 @@
 <body>
 
 <nav class="nav" aria-label="Site navigation">
-  <a href="/" class="wordmark" aria-label="<span class="brand-inline"><span class="brand-my">My</span><span class="brand-dopa">Dopa</span><sup class="brand-sup">™</sup></span> home"><span class="my">My</span><span class="dopa">Dopa</span><sup>™</sup></a>
+  <a href="/" class="wordmark"><span class="my">My</span><span class="dopa">Dopa</span><sup>™</sup></a>
   <a href="/discoveries/" class="nav-home">MyDiscoveries™</a>
   <a href="/practice/" class="nav-home">The Practice</a>
   <a href="/personal-development/" class="nav-home">Personal Development</a>
@@ -712,6 +720,7 @@
   <a href="/for-organizations/" class="nav-home">For Organizations</a>
   <a href="/?quiz=open" class="cta-pill">Join the waitlist →</a>
 </nav>
+<p class="back-link"><a href="/">← Back to MyDopa</a></p>
 
 <main>
 

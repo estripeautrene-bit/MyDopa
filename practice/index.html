@@ -84,11 +84,10 @@
   }
 
   .nav {
-    padding:22px 24px;
+    padding:16px 36px;
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    gap:16px;
+    gap:28px;
   }
 
   .wordmark {
@@ -342,6 +341,15 @@
   vertical-align:super;
   margin-left:1px;
 }
+
+/* ── nav alignment fix ── */
+a.wordmark { text-decoration:none; }
+.cta-pill { margin-left:auto; }
+@media (max-width:640px) { .cta-pill { margin-left:0; } }
+/* ── back link ── */
+.back-link { display:block; text-align:center; font-size:13px; padding:16px 24px 0; }
+.back-link a { color:var(--gray-muted,#6B7280); text-decoration:none; transition:color .15s; }
+.back-link a:hover { color:#fff; }
 </style>
 <style>
   /* page-specific: long-form prose section */
@@ -416,6 +424,7 @@
 <a class="nav-home" href="/for-organizations/">For Organizations</a>
 <a class="cta-pill" href="/?quiz=open">Join the waitlist →</a>
 </nav>
+<p class="back-link"><a href="/">← Back to MyDopa</a></p>
 <section class="hero">
 <h1 class="word">The Practice</h1>
 <hr class="rule"/>
