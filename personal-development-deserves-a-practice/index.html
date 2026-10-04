@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="https://mydopa.app/personal-development-deserves-a-practice" rel="canonical"/>
-<title>Personal Development Deserves a Practice™ | MyDopa™</title>
+<title>Personal Development Deserves a Practice | MyDopa™</title>
 <meta content="We practice everything we care about improving. Personal development — dealing with the most consequential capabilities in a life — deserves the same." name="description"/>
 <meta content="Personal Development Deserves a Practice™" property="og:title"/>
 <meta content="Personal development deals with some of the most consequential capabilities in a human life — yet it is still treated largely as something to consume. The missing category." property="og:description"/>
@@ -174,8 +174,9 @@
     padding:16px 36px;
     display:flex;
     align-items:center;
-    gap:28px;
+    justify-content:space-between;
   }
+  .nav-links { display:flex; align-items:center; gap:28px; }
 
   .wordmark {
     font-family:var(--fd);
@@ -193,7 +194,7 @@
   .nav-home {
     color:var(--gray-muted);
     text-decoration:none;
-    font-size:14px;
+    font-size:13px;
   }
 
   .cta-pill {
@@ -397,6 +398,7 @@
       flex-wrap:wrap;
       justify-content:center;
     }
+    .nav-links { display:none; }
 
     .nav-home {
       order:3;
@@ -431,12 +433,10 @@
 
 /* ── nav alignment fix ── */
 a.wordmark { text-decoration:none; }
-.cta-pill { margin-left:auto; }
-@media (max-width:640px) { .cta-pill { margin-left:0; } }
 /* ── back link ── */
-.back-link { display:block; text-align:center; font-size:13px; padding:16px 24px 0; }
-.back-link a { color:var(--gray-muted,#6B7280); text-decoration:none; transition:color .15s; }
-.back-link a:hover { color:#fff; }
+.back-link { display:block; text-align:center; font-size:13px; font-weight:500; padding:14px 0 10px; }
+.back-link a { color:var(--purple-bright,#A855F7); text-decoration:none; transition:opacity .15s; }
+.back-link a:hover { opacity:.75; }
 </style>
 <style>
   /* page-specific: long-form prose section */
@@ -489,16 +489,18 @@ a.wordmark { text-decoration:none; }
 <body>
 <nav class="nav">
 <a class="wordmark" href="/"><span class="my">My</span><span class="dopa">Dopa</span><sup>™</sup></a>
-<a class="nav-home" href="/discoveries/">MyDiscoveries™</a>
-<a class="nav-home" href="/practice/">The Practice</a>
-<a class="nav-home" href="/personal-development/">Personal Development</a>
-<a class="nav-home" href="/for-professionals/">For Professionals</a>
-<a class="nav-home" href="/for-organizations/">For Organizations</a>
-<a class="cta-pill" href="/?quiz=open">Join the waitlist →</a>
+  <div class="nav-links">
+    <a class="nav-home" href="/discoveries/">MyDiscoveries™</a>
+    <a class="nav-home" href="/practice/">The Practice</a>
+    <a class="nav-home" href="/personal-development/">Personal Development</a>
+    <a class="nav-home" href="/for-professionals/">For Professionals</a>
+    <a class="nav-home" href="/for-organizations/">For Organizations</a>
+    <a class="cta-pill" href="/?quiz=open">Join the waitlist →</a>
+  </div>
 </nav>
 <p class="back-link"><a href="/">← Back to MyDopa</a></p>
 <section class="hero">
-<h1 class="word">Personal Development Deserves a Practice™</h1>
+<h1 class="word">Personal Development Deserves a Practice</h1>
 <hr class="rule" style="width:320px;"/>
 <p class="def">We practice almost everything we care about improving.</p>
 <p class="def sense-2" style="font-size:clamp(16px,2.2vw,20px);margin-top:14px;">Personal development is the conspicuous exception, and the gap is where the category begins.</p>
@@ -612,17 +614,17 @@ a.wordmark { text-decoration:none; }
 <a href="/word-mirrors">Word Mirrors</a>
 <a href="/feelings">Feelings</a>
 <a href="/blog/">Blog</a>
-<a href="/myagency/">MyAgency™</a>
+<a href="/myagency/">MyAgency</a>
 </div>
 <div class="footer-col">
 <h4>Ideas &amp; Research</h4>
-<a href="/fall-in-love-with-your-own-progress/">Fall in Love With Your Own Progress™</a>
-<a href="/feelings-are-not-facts/">Feelings Are Not Facts™</a>
-<a href="/savouring/">Savouring™</a>
-<a href="/visibility-and-continuity/">Visibility and Continuity™</a>
-<a href="/personal-development-deserves-a-practice/">Personal Development Deserves a Practice™</a>
-<a href="/self-efficacy/">Self-Efficacy™</a>
-<a href="/accuracy-clarity-self-confidence/">Accuracy, Clarity, and Self-Confidence™</a>
+<a href="/fall-in-love-with-your-own-progress/">Fall in Love With Your Own Progress</a>
+<a href="/feelings-are-not-facts/">Feelings Are Not Facts</a>
+<a href="/savouring/">Savouring</a>
+<a href="/visibility-and-continuity/">Visibility and Continuity</a>
+<a href="/personal-development-deserves-a-practice/">Personal Development Deserves a Practice</a>
+<a href="/self-efficacy/">Self-Efficacy</a>
+<a href="/accuracy-clarity-self-confidence/">Accuracy, Clarity, and Self-Confidence</a>
 </div>
 <div class="footer-col">
 <h4>For</h4>
