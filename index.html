@@ -1264,7 +1264,7 @@ var _heroVariantSet=false;
 function applyHeroVariant(v){
   if(_heroVariantSet) return;
   _heroVariantSet=true;
-  heroVariant=(v&&HERO_VARIANTS[v])?v:'control_a';
+  heroVariant='variant_d';
   var el=document.getElementById('hero-variant-copy');
   if(el){el.textContent=HERO_VARIANTS[heroVariant];el.style.opacity='1';}
   posthog.capture('hero_viewed',{hero_variant:heroVariant});
