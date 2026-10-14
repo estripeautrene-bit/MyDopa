@@ -129,6 +129,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mydopa.app/blog/daily-personal-development-practice</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mydopa.app/blog/daily-wins-habit-brain-rewire</loc>
     <priority>0.8</priority>
   </url>
